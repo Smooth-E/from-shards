@@ -1,4 +1,4 @@
-using System.Collections;
+п»їusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -6,18 +6,18 @@ using System.IO;
 
 public class DataManager : MonoBehaviour
 {
-    /* Это класс - реализация файла-сохранения */
+    /* Р­С‚Рѕ РєР»Р°СЃСЃ - СЂРµР°Р»РёР·Р°С†РёСЏ С„Р°Р№Р»Р°-СЃРѕС…СЂР°РЅРµРЅРёСЏ */
     [System.Serializable]
     public class DataContainer
     {
-        //Доюавьте сюла переменные, которые хотиете сохранять
-        //Сохранять можно только ПРОСТЕЙШИЕ типы данный
-        //(string, int, float, bool, byte и др., а также их массивы int[], float[] и тд.)
-        //Если вы хотите сохранить например цвет - сохраняйте его как byte[3] или float[3]
+        //Р”РѕСЋР°РІСЊС‚Рµ СЃСЋР»Р° РїРµСЂРµРјРµРЅРЅС‹Рµ, РєРѕС‚РѕСЂС‹Рµ С…РѕС‚РёРµС‚Рµ СЃРѕС…СЂР°РЅСЏС‚СЊ
+        //РЎРѕС…СЂР°РЅСЏС‚СЊ РјРѕР¶РЅРѕ С‚РѕР»СЊРєРѕ РџР РћРЎРўР•Р™РЁРР• С‚РёРїС‹ РґР°РЅРЅС‹Р№
+        //(string, int, float, bool, byte Рё РґСЂ., Р° С‚Р°РєР¶Рµ РёС… РјР°СЃСЃРёРІС‹ int[], float[] Рё С‚Рґ.)
+        //Р•СЃР»Рё РІС‹ С…РѕС‚РёС‚Рµ СЃРѕС…СЂР°РЅРёС‚СЊ РЅР°РїСЂРёРјРµСЂ С†РІРµС‚ - СЃРѕС…СЂР°РЅСЏР№С‚Рµ РµРіРѕ РєР°Рє byte[3] РёР»Рё float[3]
 
         public int level = 0;
     }
-    //Текст-филлер
+    //РўРµРєСЃС‚-С„РёР»Р»РµСЂ
     const string loremIpsumShort = "Lorem ipsum dolor sit amet...";
     const string loremIpsumLong = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
@@ -36,8 +36,8 @@ public class DataManager : MonoBehaviour
         public string chapterName = loremIpsumShort;
         public Sprite mainArt;
         public Item[] items = new Item[5];
-        public string lostQuote = loremIpsumLong; //Циатата, высвечивающаяся при проигрыше
-        public string dairyQuote = loremIpsumLong; //Циатата в нижнем углу дневника
+        public string lostQuote = loremIpsumLong; //Р¦РёР°С‚Р°С‚Р°, РІС‹СЃРІРµС‡РёРІР°СЋС‰Р°СЏСЃСЏ РїСЂРё РїСЂРѕРёРіСЂС‹С€Рµ
+        public string dairyQuote = loremIpsumLong; //Р¦РёР°С‚Р°С‚Р° РІ РЅРёР¶РЅРµРј СѓРіР»Сѓ РґРЅРµРІРЅРёРєР°
     }
 
     public static DataManager instance;

@@ -1,4 +1,4 @@
-using System.Collections;
+п»їusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +6,7 @@ public class PlayableSceneManager : MonoBehaviour
 {
 
     [SerializeField] private int levelIndexDynamic = -1;
-    public static int levelIndex = 0; //Это число выставляется перед запуском сцены из меню
+    public static int levelIndex = 0; //Р­С‚Рѕ С‡РёСЃР»Рѕ РІС‹СЃС‚Р°РІР»СЏРµС‚СЃСЏ РїРµСЂРµРґ Р·Р°РїСѓСЃРєРѕРј СЃС†РµРЅС‹ РёР· РјРµРЅСЋ
 
     [Header("System Information:"), Space(10)]
     public Transform playfieldParent;

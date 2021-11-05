@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,8 +33,9 @@ public class OnItemController : MonoBehaviour
             descriptionSnippet.GetComponent<Animator>().SetBool(animatorBoolName, hoveredWithMouse);
             if (hoveredWithMouse)
             {
-                var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                descriptionSnippet.GetComponent<RectTransform>().position = new Vector2(position.x, position.y);
+                var position = descriptionSnippet.GetComponent<RectTransform>().position;
+                var lossyScale = new Vector3(transform.lossyScale.x, transform.lossyScale.y);
+                descriptionSnippet.GetComponent<RectTransform>().position = position;
             }
             yield return null;
         }
