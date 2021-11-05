@@ -33,9 +33,8 @@ public class OnItemController : MonoBehaviour
             descriptionSnippet.GetComponent<Animator>().SetBool(animatorBoolName, hoveredWithMouse);
             if (hoveredWithMouse)
             {
-                var position = descriptionSnippet.GetComponent<RectTransform>().position;
-                var lossyScale = new Vector3(transform.lossyScale.x, transform.lossyScale.y);
-                descriptionSnippet.GetComponent<RectTransform>().position = position;
+                var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                descriptionSnippet.GetComponent<RectTransform>().position = new Vector2(position.x, position.y);
             }
             yield return null;
         }
@@ -57,3 +56,5 @@ public class OnItemController : MonoBehaviour
         
     }
 }
+
+//короче, предлагаю оставить подсказки такими каие они есть, потому сделать их сложновато сделать )
