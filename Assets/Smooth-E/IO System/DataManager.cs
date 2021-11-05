@@ -24,8 +24,8 @@ public class DataManager : MonoBehaviour
     [System.Serializable]
     public class Item
     {
-        public Sprite icon;
         public string name = loremIpsumShort;
+        public Sprite icon;
         public string description = loremIpsumLong;
         public string conversationSnippet = loremIpsumShort;
     }
