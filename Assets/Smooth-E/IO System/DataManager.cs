@@ -17,10 +17,34 @@ public class DataManager : MonoBehaviour
 
         public int level = 0;
     }
+    //Текст-филлер
+    const string loremIpsumShort = "Lorem ipsum dolor sit amet...";
+    const string loremIpsumLong = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
-    static DataManager instance;
+    [System.Serializable]
+    public class Item
+    {
+        public Sprite icon;
+        public string name = loremIpsumShort;
+        public string description = loremIpsumLong;
+        public string conversationSnippet = loremIpsumShort;
+    }
+
+    [System.Serializable]
+    public class LevelBundle
+    {
+        public string chapterName = loremIpsumShort;
+        public Sprite mainArt;
+        public Item[] items = new Item[5];
+        public string lostQuote = loremIpsumLong; //Циатата, высвечивающаяся при проигрыше
+        public string dairyQuote = loremIpsumLong; //Циатата в нижнем углу дневника
+    }
+
+    public static DataManager instance;
     public static DataContainer data;
     static string filePath = "\\savefile";
+
+    public LevelBundle[] levels = new LevelBundle[4];
 
     public void Awake()
     {
