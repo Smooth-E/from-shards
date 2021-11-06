@@ -97,7 +97,8 @@ public class PlayableSceneManager : MonoBehaviour
                         }
                         else
                         {
-                            Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
+                            playField[x, y].FadeAndDestroy();
+                            //Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
                             playField[x, y] = null;
                             playField[prevX, prevY].id += 1;
                             prevX = x;

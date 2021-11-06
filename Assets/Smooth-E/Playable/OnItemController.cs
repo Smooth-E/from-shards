@@ -29,7 +29,8 @@ public class OnItemController : MonoBehaviour
 
         myDescriptionSnippet = Instantiate(descriptionSnippet, canvas.transform);
 
-        StartCoroutine("ShowDescription");
+        StartCoroutine(ShowDescription());
+        StartCoroutine(rescaleOnstart());
     }
 
     IEnumerator ShowDescription()
@@ -44,6 +45,19 @@ public class OnItemController : MonoBehaviour
             }
             yield return null;
         }
+    }
+
+    IEnumerator rescaleOnstart()
+    {
+        myDescriptionSnippet.SetActive(false);
+        var fadingSpeed = 0.01f;
+        for (float scale = 0; scale < 1; scale += fadingSpeed)
+        {
+            transform.localScale = new Vector3(scale, scale, 1);
+            yield return null;
+        }
+        myDescriptionSnippet.SetActive(true);
+        transform.localScale = Vector3.one;
     }
 
     public void OnMouseEnter()
@@ -99,5 +113,47 @@ public class OnItemController : MonoBehaviour
     public void OnDestroy()
     {
         Destroy(myDescriptionSnippet);
+    }
+
+    IEnumerator moveTo(int x, int y)
+    {
+        while (true)
+        {
+            Vector2 cellPosition = PlayableSceneManager.instance.cellPositions[x, y];
+            float step = 10 * Time.deltaTime;
+            float diffX = transform.position.x - cellPosition.x;
+            float diffY = transform.position.y - cellPosition.y;
+            float newX, newY;
+            if (step > Mathf.Abs(diffX)) newX = cellPosition.x;
+            else newX = transform.position.x - step * (transform.position.x / Mathf.Abs(transform.position.x));
+            if (step > Mathf.Abs(diffY)) newY = cellPosition.y;
+            else newY = transform.position.y - step * (transform.position.y / Mathf.Abs(transform.position.y));
+            transform.position = new Vector3(newX, newY, 2);
+            if (new Vector2(transform.position.x, transform.position.y) == cellPosition) break;
+            yield return null;
+        }
+        Destroy(gameObject);
+    }
+
+    IEnumerator fade()
+    {
+        myDescriptionSnippet.SetActive(false);
+        var fadingSpeed = 0.01f;
+        for (float scale = 1; scale >= -fadingSpeed; scale -= fadingSpeed)
+        {
+            transform.localScale = new Vector3(scale, scale, 1);
+            yield return null;
+        }
+        Destroy(gameObject);
+    }
+
+    public void FadeAndDestroy()
+    {
+        StartCoroutine(fade());
+    }
+
+    public void MoveAndDestroy(int x, int y)
+    {
+        StartCoroutine(moveTo(x, y));
     }
 }

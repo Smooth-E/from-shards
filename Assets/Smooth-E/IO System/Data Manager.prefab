@@ -57,7 +57,7 @@ MonoBehaviour:
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u041A\u0440\u0430\u043D\u0434\u0430\u0448"
-      icon: {fileID: 21300000, guid: 322728709c5fb6b45a3b13c53eac4108, type: 3}
+      icon: {fileID: 21300000, guid: ad3eec91e6896b240b3d6001df208ebe, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -108,7 +108,7 @@ MonoBehaviour:
     mainArt: {fileID: 0}
     items:
     - name: "\u0413\u043E\u0440\u0441\u0442\u044C \u043F\u0435\u043F\u043B\u0430"
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: 6bebff742f7cf6a4fa410992066cfa9f, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -117,7 +117,7 @@ MonoBehaviour:
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u0414\u043E\u0441\u043A\u0430"
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: 307f6c1dd29f49f4884ec153c6c3a6f1, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -126,7 +126,7 @@ MonoBehaviour:
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u041E\u0431\u043B\u043E\u043C\u043A\u0438 \u043A\u0438\u0440\u043F\u0438\u0447\u0430"
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: 8e5c5bbc7b358bc40998d0b9a58ba07f, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -135,7 +135,7 @@ MonoBehaviour:
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u0424\u0443\u043D\u0434\u0430\u043C\u0435\u043D\u0442"
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: 60a7f3ba161cd7e4faee302d02714422, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -144,7 +144,7 @@ MonoBehaviour:
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u0414\u043E\u043C \u042D\u043C\u0438\u043B\u0438"
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: 91ccad1ad4babc24ab13ebed850ec12d, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -164,11 +164,11 @@ MonoBehaviour:
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
       eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
       in culpa qui officia deserunt mollit anim id est laborum.
-  - chapterName: Lorem ipsum dolor sit amet...
+  - chapterName: "\u0414\u0443\u0448\u0430"
     mainArt: {fileID: 0}
     items:
-    - name: Lorem ipsum dolor sit amet...
-      icon: {fileID: 0}
+    - name: "\u041C\u0435\u0434\u0438\u043A\u0430\u043C\u0435\u043D\u0442\u044B"
+      icon: {fileID: 21300000, guid: 5dd363706c46a2143b8e1d8ff972afa0, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -176,8 +176,8 @@ MonoBehaviour:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       conversationSnippet: Lorem ipsum dolor sit amet...
-    - name: Lorem ipsum dolor sit amet...
-      icon: {fileID: 0}
+    - name: "\u0410\u043B\u043A\u043E\u0433\u043E\u043B\u044C"
+      icon: {fileID: 21300000, guid: a864ba94476e49a4b836f975f4ac8e7e, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -185,8 +185,8 @@ MonoBehaviour:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       conversationSnippet: Lorem ipsum dolor sit amet...
-    - name: Lorem ipsum dolor sit amet...
-      icon: {fileID: 0}
+    - name: "\u041C\u043E\u043B\u043D\u0438\u044F"
+      icon: {fileID: 21300000, guid: e1a152101db8465498dea30ab9add8ff, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -194,8 +194,8 @@ MonoBehaviour:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       conversationSnippet: Lorem ipsum dolor sit amet...
-    - name: Lorem ipsum dolor sit amet...
-      icon: {fileID: 0}
+    - name: "\u042D\u043A\u0442\u043E\u043F\u043B\u0430\u0437\u043C\u0430"
+      icon: {fileID: 21300000, guid: 8a3fbf51897c07a458f7268f10cb56bc, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -203,8 +203,8 @@ MonoBehaviour:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       conversationSnippet: Lorem ipsum dolor sit amet...
-    - name: Lorem ipsum dolor sit amet...
-      icon: {fileID: 0}
+    - name: "\u0413\u043E\u0440\u044F\u0449\u0438\u0435 \u0433\u043B\u0430\u0437\u0430"
+      icon: {fileID: 21300000, guid: 216d04711e07fe14f99b7a7242351a60, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -224,11 +224,11 @@ MonoBehaviour:
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
       eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
       in culpa qui officia deserunt mollit anim id est laborum.
-  - chapterName: Lorem ipsum dolor sit amet...
+  - chapterName: "\u0422\u0435\u043B\u043E"
     mainArt: {fileID: 0}
     items:
-    - name: Lorem ipsum dolor sit amet...
-      icon: {fileID: 0}
+    - name: "\u041A\u043E\u0441\u0442\u0438"
+      icon: {fileID: 21300000, guid: 532f1580b5fb4194bac5efb7a7d9bfa4, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -236,8 +236,8 @@ MonoBehaviour:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       conversationSnippet: Lorem ipsum dolor sit amet...
-    - name: Lorem ipsum dolor sit amet...
-      icon: {fileID: 0}
+    - name: "\u041F\u0430\u043A\u0435\u0442 \u043A\u0440\u043E\u0432\u0438"
+      icon: {fileID: 21300000, guid: fd1e07b30449c5b4ea70f6f820ee2bb5, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -245,8 +245,8 @@ MonoBehaviour:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       conversationSnippet: Lorem ipsum dolor sit amet...
-    - name: Lorem ipsum dolor sit amet...
-      icon: {fileID: 0}
+    - name: "\u0421\u0435\u0440\u0434\u0446\u0435"
+      icon: {fileID: 21300000, guid: 9294e224965535d41a22c8189797b742, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -254,8 +254,8 @@ MonoBehaviour:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       conversationSnippet: Lorem ipsum dolor sit amet...
-    - name: Lorem ipsum dolor sit amet...
-      icon: {fileID: 0}
+    - name: "\"\u0421\u0438\u043D\u044F\u044F \u0438\u0437\u043E\u043B\u0435\u043D\u0442\u0430\""
+      icon: {fileID: 21300000, guid: 0925c283a7ad28444bb74a0740988547, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -263,8 +263,8 @@ MonoBehaviour:
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       conversationSnippet: Lorem ipsum dolor sit amet...
-    - name: Lorem ipsum dolor sit amet...
-      icon: {fileID: 0}
+    - name: "\u042D\u043C\u0438\u043B\u0438"
+      icon: {fileID: 21300000, guid: 9a079be116ede8e4884192589ee419d9, type: 3}
       description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
