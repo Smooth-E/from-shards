@@ -12,7 +12,9 @@ public class OnItemController : MonoBehaviour
     static float waitToHideDescription = 0.5f;
     public GameObject descriptionSnippet;
     public Canvas canvas;
-    string animatorBoolName = "isOpened";
+    const string animatorBoolName = "isOpened";
+    float itemSpeed = 10;
+
 
     public OnItemController(int id)
     {
@@ -33,7 +35,7 @@ public class OnItemController : MonoBehaviour
     {
         while (true)
         {
-            descriptionSnippet.GetComponent<Animator>().SetBool("isOpened", hoveredWithMouse);
+            descriptionSnippet.GetComponent<Animator>().SetBool(animatorBoolName, hoveredWithMouse);
             if (hoveredWithMouse)
             {
                 var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -61,5 +63,37 @@ public class OnItemController : MonoBehaviour
         var t = descriptionSnippet.transform.GetChild(0).GetComponentsInChildren<FancyText>();
         t[0].textString = itemData.name;
         t[1].textString = itemData.description;
+
+
+        int x = -1, y = -1;
+        var field = PlayableSceneManager.instance.playField;
+        for (int xIndex = 0; xIndex < field.GetLength(0); xIndex++)
+        {
+            for (int yIndex = 0; yIndex < field.GetLength(1); yIndex++)
+            {
+                if (Object.ReferenceEquals(field[xIndex, yIndex], this))
+                {
+                    x = xIndex;
+                    y = yIndex;
+                    break;
+                }
+            }
+        }
+        if (x != -1 && y != -1)
+        {
+            Vector2 cellPosition = PlayableSceneManager.instance.cellPositions[x, y];
+            float step = 10 * Time.deltaTime;
+            Vector2 newItemPosition = Vector2.zero;
+            Debug.LogWarning("1: " + newItemPosition.ToString());
+            float diffX = transform.position.x - cellPosition.x;
+            float diffY = transform.position.y - cellPosition.y;
+            float newX, newY;
+            if (step > Mathf.Abs(diffX)) newX = cellPosition.x;
+            else newX = transform.position.x - step * (transform.position.x / Mathf.Abs(transform.position.x));
+            if (step > Mathf.Abs(diffY)) newY = cellPosition.y;
+            else newY = transform.position.y - step * (transform.position.y / Mathf.Abs(transform.position.y));
+            transform.position = new Vector2(newX, newY);
+        }
+
     }
 }

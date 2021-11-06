@@ -44,6 +44,10 @@ public class PlayableSceneManager : MonoBehaviour
             }
         }
         for (var x = 0; x < fieldWidth; x++) for (var y = 0; y < fieldHeight; y++) playField[x, y] = null;
+
+        var pos = cellPositions[cellPositions.GetLength(0) / 2, cellPositions.GetLength(1) / 2];
+        Camera.main.transform.position = new Vector3(pos.x, pos.y, -10);
+
         for (int i = 0; i < itemsSpawnedOnStart; i++)
         {
             var position = getRandomPositionOnField();
@@ -51,6 +55,7 @@ public class PlayableSceneManager : MonoBehaviour
             var item = Instantiate(itemPrefab, itemsParent);
             item.transform.position = cellPositions[x, y];
             item.GetComponent<OnItemController>().id = Random.Range(0, maxItemLevelToSpawn + 1);
+            playField[x, y] = item.GetComponent<OnItemController>();
         }
     }
 
