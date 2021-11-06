@@ -9,13 +9,14 @@ public class FancyText : MonoBehaviour, IPointerDownHandler
 {
 
     Text textComponent;
-    string textString;
+    public string textString;
     bool spellingCoroutineInProgress = false, textSpelled = false;
     [HideInInspector] public bool spellImidiately = false;
     const string spellingCoroutineName = "spellingCoroutine";
     const string setNiceTextSizeCoroutineName = "setNiceTextSizeCoroutine";
     public float spellingDelay = .01f;
     bool textSizeSet = false;
+    bool isActive;
 
     void Start()
     {
@@ -45,7 +46,7 @@ public class FancyText : MonoBehaviour, IPointerDownHandler
                 textComponent.text = textString;
                 break;
             }
-            if (!isActiveAndEnabled) break;
+            if (!isActive) break;
             yield return new WaitForSeconds(spellingDelay);
         }
         textSpelled = true;
@@ -56,8 +57,7 @@ public class FancyText : MonoBehaviour, IPointerDownHandler
     {
         if (textSizeSet)
         {
-            bool isActive = GetComponent<RectTransform>().lossyScale.x > 0 && GetComponent<RectTransform>().lossyScale.y > 0;
-            Debug.Log(isActive);
+            isActive = GetComponent<RectTransform>().lossyScale.x > 0 && GetComponent<RectTransform>().lossyScale.y > 0;
             if (isActive && !spellingCoroutineInProgress && !textSpelled) StartCoroutine(spellingCoroutineName);
             else if (!isActive)
             {

@@ -108,7 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa0391e573eea045a212a46fe19a503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellingDelay: 0.001
+  textString: 
+  spellImidiately: 0
+  spellingDelay: 0.1
 --- !u!1 &3857328485441395697
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa0391e573eea045a212a46fe19a503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textString: 
+  spellImidiately: 0
   spellingDelay: 0.01
 --- !u!1 &8105110618109950778
 GameObject:

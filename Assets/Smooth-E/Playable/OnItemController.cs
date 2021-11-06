@@ -13,16 +13,19 @@ public class OnItemController : MonoBehaviour
     public GameObject descriptionSnippet;
     public Canvas canvas;
     string animatorBoolName = "isOpened";
-    public RuntimeAnimatorController runtimeAnimatorController;
+
+    public OnItemController(int id)
+    {
+        this.id = id;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        runtimeAnimatorController = descriptionSnippet.GetComponent<Animator>().runtimeAnimatorController;
         canvas = Camera.main.transform.GetComponentInChildren<Canvas>();
-        itemData = DataManager.instance.levels[PlayableSceneManager.levelIndex].items[id];
-        GetComponent<SpriteRenderer>().sprite = itemData.icon;
+
         descriptionSnippet = Instantiate(descriptionSnippet, canvas.transform);
+
         StartCoroutine("ShowDescription");
     }
 
@@ -30,7 +33,7 @@ public class OnItemController : MonoBehaviour
     {
         while (true)
         {
-            descriptionSnippet.GetComponent<Animator>().SetBool(animatorBoolName, hoveredWithMouse);
+            descriptionSnippet.GetComponent<Animator>().SetBool("isOpened", hoveredWithMouse);
             if (hoveredWithMouse)
             {
                 var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -50,11 +53,13 @@ public class OnItemController : MonoBehaviour
         hoveredWithMouse = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        itemData = DataManager.instance.levels[PlayableSceneManager.levelIndex].items[id];
+        GetComponent<SpriteRenderer>().sprite = itemData.icon;
+
+        var t = descriptionSnippet.transform.GetChild(0).GetComponentsInChildren<FancyText>();
+        t[0].textString = itemData.name;
+        t[1].textString = itemData.description;
     }
 }
-
-//короче, предлагаю оставить подсказки такими каие они есть, потому сделать их сложновато сделать )
