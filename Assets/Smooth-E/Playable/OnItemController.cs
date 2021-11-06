@@ -11,6 +11,7 @@ public class OnItemController : MonoBehaviour
     bool hoveredWithMouse = false;
     static float waitToHideDescription = 0.5f;
     public GameObject descriptionSnippet;
+    GameObject myDescriptionSnippet;
     public Canvas canvas;
     const string animatorBoolName = "isOpened";
     float itemSpeed = 10;
@@ -26,7 +27,7 @@ public class OnItemController : MonoBehaviour
     {
         canvas = Camera.main.transform.GetComponentInChildren<Canvas>();
 
-        descriptionSnippet = Instantiate(descriptionSnippet, canvas.transform);
+        myDescriptionSnippet = Instantiate(descriptionSnippet, canvas.transform);
 
         StartCoroutine("ShowDescription");
     }
@@ -35,11 +36,11 @@ public class OnItemController : MonoBehaviour
     {
         while (true)
         {
-            descriptionSnippet.GetComponent<Animator>().SetBool(animatorBoolName, hoveredWithMouse);
+            myDescriptionSnippet.GetComponent<Animator>().SetBool(animatorBoolName, hoveredWithMouse);
             if (hoveredWithMouse)
             {
                 var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                descriptionSnippet.GetComponent<RectTransform>().position = new Vector2(position.x, position.y);
+                myDescriptionSnippet.GetComponent<RectTransform>().position = new Vector2(position.x, position.y);
             }
             yield return null;
         }
@@ -60,7 +61,7 @@ public class OnItemController : MonoBehaviour
         itemData = DataManager.instance.levels[PlayableSceneManager.levelIndex].items[id];
         GetComponent<SpriteRenderer>().sprite = itemData.icon;
 
-        var t = descriptionSnippet.transform.GetChild(0).GetComponentsInChildren<FancyText>();
+        var t = myDescriptionSnippet.transform.GetChild(0).GetComponentsInChildren<FancyText>();
         t[0].textString = itemData.name;
         t[1].textString = itemData.description;
 
@@ -83,8 +84,6 @@ public class OnItemController : MonoBehaviour
         {
             Vector2 cellPosition = PlayableSceneManager.instance.cellPositions[x, y];
             float step = 10 * Time.deltaTime;
-            Vector2 newItemPosition = Vector2.zero;
-            Debug.LogWarning("1: " + newItemPosition.ToString());
             float diffX = transform.position.x - cellPosition.x;
             float diffY = transform.position.y - cellPosition.y;
             float newX, newY;
@@ -95,5 +94,10 @@ public class OnItemController : MonoBehaviour
             transform.position = new Vector2(newX, newY);
         }
 
+    }
+
+    public void OnDestroy()
+    {
+        Destroy(myDescriptionSnippet);
     }
 }
