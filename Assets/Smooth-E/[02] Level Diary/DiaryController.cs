@@ -13,31 +13,53 @@ public class DiaryController : MonoBehaviour
         public Image iconImage;
     }
 
-    int currentLevelIndex = 0;
+    public static int currentLevelIndex = 0;
     public FancyText headerText, descriptionText;
     public Image mainArtwork;
     public ItemCluster[] items = new ItemCluster[5];
+    public Sprite lockedItemSprite;
 
     void Start()
     {
         DataManager.LoadData();
-        currentLevelIndex = DataManager.data.level;
         UpdateStats();
     }
 
     void UpdateStats()
     {
-        var levelData = DataManager.instance.levels[currentLevelIndex];
-        headerText.ChangeText(levelData.chapterName);
-        descriptionText.ChangeText(levelData.chapterStory);
-        mainArtwork.sprite = levelData.mainArt;
-        for (int i = 0; i < items.Length; i++)
+        if (DataManager.data.level >= currentLevelIndex)
         {
-            var item = items[i];
-            var itemData = levelData.items[i];
-            item.headerText.ChangeText(itemData.name);
-            item.descriptionText.ChangeText(itemData.description);
-            item.iconImage.sprite = itemData.icon;
+            var levelData = DataManager.instance.levels[currentLevelIndex];
+            var o = headerText.gameObject;
+            headerText.ChangeText(levelData.chapterName);
+            headerText = o.GetComponent<FancyText>();
+            descriptionText.ChangeText(levelData.chapterStory);
+            mainArtwork.sprite = levelData.mainArt;
+            for (int i = 0; i < items.Length; i++)
+            {
+                var item = items[i];
+                var itemData = levelData.items[i];
+                item.headerText.ChangeText(itemData.name);
+                item.descriptionText.ChangeText(itemData.description);
+                item.iconImage.sprite = itemData.icon;
+            }
+        }
+        else
+        {
+            var levelData = DataManager.instance.levels[currentLevelIndex];
+            var o = headerText.gameObject;
+            headerText.ChangeText("???");
+            headerText = o.GetComponent<FancyText>();
+            descriptionText.ChangeText("???");
+            mainArtwork.sprite = levelData.mainArt;
+            for (int i = 0; i < items.Length; i++)
+            {
+                var item = items[i];
+                var itemData = levelData.items[i];
+                item.headerText.ChangeText("???");
+                item.descriptionText.ChangeText("???");
+                item.iconImage.sprite = lockedItemSprite;
+            }
         }
     }
 
@@ -45,13 +67,24 @@ public class DiaryController : MonoBehaviour
     {
         currentLevelIndex--;
         if (currentLevelIndex < 0) currentLevelIndex = DataManager.instance.levels.Length - 1;
-        UpdateStats();
+        SceneManagerPlayable.LoadScene(2);
     }
 
     public void RightArrow()
     {
         currentLevelIndex++;
         if (currentLevelIndex > DataManager.instance.levels.Length - 1) currentLevelIndex = 0;
-        UpdateStats();
+        SceneManagerPlayable.LoadScene(2);
+    }
+
+    public void ButtonBack()
+    {
+        SceneManagerPlayable.LoadScene(0);
+    }
+
+    public void ButtonStart()
+    {
+        PlayableSceneManager.levelIndex = currentLevelIndex;
+        SceneManagerPlayable.LoadScene(1);
     }
 }

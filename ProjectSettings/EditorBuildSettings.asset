@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Danil/Scenes/Menu.unity
+    guid: 4cb7da9e2d4b7d74dbc133dd42ad9b93
+  - enabled: 1
+    path: Assets/Smooth-E/[01] Playable/Playable.unity
+    guid: 440c6e6849c69db47bb2549a63c72c9c
+  - enabled: 1
+    path: Assets/Smooth-E/[02] Level Diary/Diary.unity
+    guid: 7d4c79a7a7e116645b15465656dbadd1
   m_configObjects: {}

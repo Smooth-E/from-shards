@@ -87,12 +87,14 @@ public class FancyText : MonoBehaviour, IPointerDownHandler
     IEnumerator changeTextCoruotine(string newText)
     {
         yield return null;
+        textString = newText;
+        GetComponent<RectTransform>().localScale = Vector2.zero;
+        yield return null;
+        GetComponent<RectTransform>().localScale = Vector2.one;
     }
 
     public void ChangeText(string newText)
     {
-        //StartCoroutine(changeTextCoruotine(newText));
-        textString = newText;
-        retype = true;
+        StartCoroutine(changeTextCoruotine(newText));
     }
 }
