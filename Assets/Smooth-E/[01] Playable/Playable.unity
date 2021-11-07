@@ -5201,7 +5201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 254971266}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 868361162}
+        m_TargetAssemblyTypeName: PlayableSceneSideButtons, Assembly-CSharp
+        m_MethodName: Again
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &254971266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5248,9 +5260,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4989181081164768432, guid: 8c56b15f73773c24a8e3ad9c65e417d1, type: 3}
+      propertyPath: protoFace
+      value: 
+      objectReference: {fileID: 2001907617}
+    - target: {fileID: 4989181081164768432, guid: 8c56b15f73773c24a8e3ad9c65e417d1, type: 3}
       propertyPath: itemsParent
       value: 
       objectReference: {fileID: 1841046618}
+    - target: {fileID: 4989181081164768432, guid: 8c56b15f73773c24a8e3ad9c65e417d1, type: 3}
+      propertyPath: chapterNameText
+      value: 
+      objectReference: {fileID: 1248056226}
     - target: {fileID: 4989181081164768432, guid: 8c56b15f73773c24a8e3ad9c65e417d1, type: 3}
       propertyPath: playfieldParent
       value: 
@@ -5714,7 +5734,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631768220}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
@@ -5742,7 +5762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1ce2f264dc3f0b149b5630013b0afc60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9228606e1abb11748949afdc1b8e9a56, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5969,6 +5989,7 @@ GameObject:
   - component: {fileID: 868361161}
   - component: {fileID: 868361160}
   - component: {fileID: 868361159}
+  - component: {fileID: 868361162}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6043,6 +6064,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &868361162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868361158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940c995d1eed1b94a949f8da72918f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &880003958
 GameObject:
   m_ObjectHideFlags: 0
@@ -6722,7 +6755,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1179370979}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 868361162}
+        m_TargetAssemblyTypeName: PlayableSceneSideButtons, Assembly-CSharp
+        m_MethodName: Menu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1179370979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8023,7 +8068,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032840094}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
@@ -8051,7 +8096,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 40ed3152745859d42bbafbb71797a6cf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 19726b1ce5dec314a9c7ddedb67eca3d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -57,6 +57,7 @@ public class DataManager : MonoBehaviour
 
     public static void SaveData()
     {
+        if (data == null) data = new DataContainer();
         try
         {
             var fileStram = new FileStream(Application.persistentDataPath + filePath, FileMode.OpenOrCreate);

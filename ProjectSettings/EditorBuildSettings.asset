@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Smooth-E/[02] Level Diary/Diary.unity
     guid: 7d4c79a7a7e116645b15465656dbadd1
+  - enabled: 1
+    path: Assets/Smooth-E/[03] Prologue/Prologue.unity
+    guid: e59eeddf09259154ea88b3e4a51661bc
+  - enabled: 1
+    path: Assets/Smooth-E/[04] End Screen/End Screen.unity
+    guid: 6d6970e95424fa341a20c603fe7c775a
+  - enabled: 1
+    path: Assets/Smooth-E/[05] Lost Screen/Lost Screen.unity
+    guid: 296a36b2f0aede341bdfaa0bb8948dfc
   m_configObjects: {}

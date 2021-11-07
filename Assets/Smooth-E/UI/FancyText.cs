@@ -10,7 +10,8 @@ public class FancyText : MonoBehaviour, IPointerDownHandler
 
     Text textComponent;
     public string textString;
-    bool spellingCoroutineInProgress = false, textSpelled = false;
+    bool spellingCoroutineInProgress = false;
+    [HideInInspector] public bool textSpelled = false;
     [HideInInspector] public bool spellImidiately = false;
     const string spellingCoroutineName = "spellingCoroutine";
     const string setNiceTextSizeCoroutineName = "setNiceTextSizeCoroutine";

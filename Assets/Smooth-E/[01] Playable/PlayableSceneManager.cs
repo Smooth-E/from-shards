@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayableSceneManager : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class PlayableSceneManager : MonoBehaviour
     public Transform itemsParent;
     public GameObject lockedCellPrefab;
     bool canPlay = true;
+    public Image protoFace;
+    public Text chapterNameText;
 
     enum Action : int
     {
@@ -34,6 +37,10 @@ public class PlayableSceneManager : MonoBehaviour
     {
         instance = this;
         if (levelIndex < 0) levelIndex = levelIndexDynamic;
+
+        protoFace.sprite = DataManager.instance.levels[levelIndex].mainArt;
+        chapterNameText.text = "#" + (levelIndex + 1) + ": " + DataManager.instance.levels[levelIndex].chapterName;
+
         fieldHeight = playfieldParent.childCount;
         fieldWidth = playfieldParent.GetChild(0).childCount;
         playField = new OnItemController[fieldWidth, fieldHeight]; // Item (x ; y)
@@ -113,10 +120,24 @@ public class PlayableSceneManager : MonoBehaviour
             else
             {
                 canPlay = false;
-                SceneManagerPlayable.LoadScene(0); //Вставить сюда индекс сцены с проигрышем
+                SceneManagerPlayable.LoadScene(5); //Вставить сюда индекс сцены с проигрышем
                 break;
             }
         }
+    }
+
+    int CheckEnd(int prevX, int prevY)
+    {
+        if (playField[prevX, prevY].id == 4)
+        {
+            DataManager.LoadData();
+            DataManager.data.level += 1;
+            DataManager.SaveData();
+            TextScreenController.level = levelIndex;
+            SceneManagerPlayable.LoadScene(4);
+            return 1;
+        }
+        else return 0;
     }
 
     void Update()
@@ -144,6 +165,7 @@ public class PlayableSceneManager : MonoBehaviour
                                 //Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
                                 playField[x, y] = null;
                                 playField[prevX, prevY].id += 1;
+                                if (CheckEnd(prevX, prevY) == 1) break;
                                 prevX = x;
                                 prevY = y;
                             }
@@ -197,6 +219,7 @@ public class PlayableSceneManager : MonoBehaviour
                                 //Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
                                 playField[x, y] = null;
                                 playField[prevX, prevY].id += 1;
+                                if (CheckEnd(prevX, prevY) == 1) break;
                                 prevX = x;
                                 prevY = y;
                             }
@@ -250,6 +273,7 @@ public class PlayableSceneManager : MonoBehaviour
                                 //Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
                                 playField[x, y] = null;
                                 playField[prevX, prevY].id += 1;
+                                if (CheckEnd(prevX, prevY) == 1) break;
                                 prevX = x;
                                 prevY = y;
                             }
@@ -304,6 +328,7 @@ public class PlayableSceneManager : MonoBehaviour
                                 //Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
                                 playField[x, y] = null;
                                 playField[prevX, prevY].id += 1;
+                                if (CheckEnd(prevX, prevY) == 1) break;
                                 prevX = x;
                                 prevY = y;
                             }

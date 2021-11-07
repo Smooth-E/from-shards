@@ -22,6 +22,7 @@ public class SceneManagerPlayable : MonoBehaviour
 
     public static void LoadScene(int buildIndex)
     {
+        DataManager.SaveData();
         instance.gameObject.GetComponent<Animator>().SetBool("isOpened", false);
         instance.StartCoroutine(instance.waitTillAble(buildIndex));
     }

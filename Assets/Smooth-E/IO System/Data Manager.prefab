@@ -45,213 +45,305 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - chapterName: "\u0412\u043E\u0441\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u044F"
-    mainArt: {fileID: 0}
+    mainArt: {fileID: 21300000, guid: cf0e7490584e0ad429844b63a3faf33b, type: 3}
     items:
     - name: "\u041A\u043B\u043E\u0447\u043A\u0438 \u0431\u0443\u043C\u0430\u0433\u0438"
       icon: {fileID: 21300000, guid: ab257caa8322f9549963eb10703e53a2, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u0412 \u0438\u0442\u043E\u0433\u0435 \u0432\u0441\u0451
+        \u0431\u044B\u043B\u043E \u0440\u0430\u0437\u043E\u0440\u0432\u0430\u043D\u043E,
+        \u0432 \u043A\u043B\u043E\u0447\u044C\u044F. \u042F \u0431\u044B\u043B\u0430
+        \u0432 \u044F\u0440\u043E\u0441\u0442\u0438, \u043D\u0430 \u0433\u0440\u0430\u043D\u0438\u2026
+        \u0427\u0442\u043E \u0434\u043E\u0432\u0435\u043B\u043E \u043C\u0435\u043D\u044F
+        \u0434\u043E \u0442\u0430\u043A\u043E\u0433\u043E?\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u041A\u0440\u0430\u043D\u0434\u0430\u0448"
       icon: {fileID: 21300000, guid: ad3eec91e6896b240b3d6001df208ebe, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u0421\u043D\u0430\u0447\u0430\u043B\u0430 \u043F\u0438\u0448\u0435\u0448\u044C
+        \u0447\u0435\u0440\u043D\u043E\u0432\u0438\u043A. \u041F\u043E\u0442\u043E\u043C
+        \u043C\u043E\u0436\u043D\u043E \u0431\u0443\u0434\u0435\u0442 \u0441\u0442\u0435\u0440\u0435\u0442\u044C
+        \u0432\u0441\u0451 \u043B\u0438\u0448\u043D\u0435\u0435 \u0438 \u043F\u0435\u0440\u0435\u043F\u0438\u0441\u0430\u0442\u044C
+        \u043D\u0430\u0447\u0438\u0441\u0442\u043E. \u0420\u0430\u0431\u043E\u0442\u0430\u0435\u0442
+        \u043B\u0438 \u0442\u0430\u043A \u0432 \u0436\u0438\u0437\u043D\u0438?\u201D "
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 \u0434\u043D\u0435\u0432\u043D\u0438\u043A\u0430"
       icon: {fileID: 21300000, guid: 8bef39a8872148744bb905966fb9503c, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u0422\u0430\u043A, \u0434\u0435\u043D\u044C \u0437\u0430
+        \u0434\u043D\u0451\u043C, \u043F\u0435\u0440\u0435\u043D\u043E\u0441\u0438\u0448\u044C
+        \u043C\u044B\u0441\u043B\u0438 \u0438\u0437 \u0433\u043E\u043B\u043E\u0432\u044B
+        \u043D\u0430 \u0431\u0443\u043C\u0430\u0433\u0443. \u0414\u043D\u0438 \u0441\u043A\u043B\u0430\u0434\u044B\u0432\u0430\u044E\u0442\u0441\u044F
+        \u0432 \u043D\u0435\u0434\u0435\u043B\u0438, \u043D\u0435\u0434\u0435\u043B\u0438
+        \u0432 \u043C\u0435\u0441\u044F\u0446\u044B. \u041E\u0433\u043B\u044F\u0434\u044B\u0432\u0430\u0435\u0448\u044C\u0441\u044F
+        \u043D\u0430 \u043F\u0440\u043E\u0448\u0435\u0434\u0448\u0438\u0439 \u0433\u043E\u0434
+        \u0438 \u0432\u0438\u0434\u0438\u0448\u044C \u0441\u043E\u0432\u0441\u0435\u043C
+        \u0434\u0440\u0443\u0433\u043E\u0433\u043E \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u0430.\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u041F\u0435\u0440\u044C\u0435\u0432\u0430\u044F \u0440\u0443\u0447\u043A\u0430"
       icon: {fileID: 21300000, guid: 0faab3f6168e6ea4ea9839e4792405f6, type: 3}
-      description: 121211
+      description: "\u201C\u0427\u0435\u0440\u043D\u043E\u0432\u0438\u043A\u0438
+        \u043F\u0435\u0440\u0435\u043F\u0438\u0441\u044B\u0432\u0430\u044E\u0442\u0441\u044F
+        \u043D\u0430\u0447\u0438\u0441\u0442\u043E. \u0418, \u0432\u0443\u0430\u043B\u044F,
+        \u0442\u0435\u043A\u0441\u0442 \u043D\u0430\u0432\u0441\u0435\u0433\u0434\u0430
+        \u0436\u0438\u0432 \u0432 \u0431\u0443\u043C\u0430\u0433\u0435. \u0422\u043E\u043F\u043E\u0440\u043E\u043C
+        \u043D\u0435 \u0432\u044B\u0440\u0443\u0431\u0438\u0442\u044C!\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
-    - name: "\u0414\u043D\u0435\u0432\u043D\u0438\u043A \u042D\u043C\u0438\u043B\u0438"
+    - name: "\u0414\u043D\u0435\u0432\u043D\u0438\u043A \u0441 \u0437\u0430\u043F\u0438\u0441\u044F\u043C\u0438"
       icon: {fileID: 21300000, guid: babd97577c2bdd644836e2b06faab4fc, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u041C\u043E\u0436\u0435\u0442, \u044D\u0442\u043E \u0438
+        \u043D\u0435 \u0432\u0441\u044F \u0436\u0438\u0437\u043D\u044C, \u043D\u043E
+        \u043E\u0447\u0435\u043D\u044C \u043C\u043D\u043E\u0433\u043E\u0435. \u0427\u0442\u043E
+        \u043C\u043E\u0436\u043D\u043E \u0443\u0437\u043D\u0430\u0442\u044C \u043E
+        \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u0435 \u0438\u0437 \u0435\u0433\u043E
+        \u0432\u043E\u0441\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u0439?
+        \u041D\u0430\u0432\u0435\u0440\u043D\u044F\u043A\u0430 \u0447\u0442\u043E-\u0442\u043E
+        \u043E\u0447\u0435\u043D\u044C \u0432\u0430\u0436\u043D\u043E\u0435.\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
-    chapterStory: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-      sunt in culpa qui officia deserunt mollit anim id est laborum.
-  - chapterName: "\u0422\u0435\u0440\u0430\u043F\u0438\u044F"
-    mainArt: {fileID: 0}
+    chapterStory: "\u0414\u0430, \u044D\u0442\u043E \u043E\u0431\u043E \u043C\u043D\u0435.
+      \u042F \u0432\u0435\u0434\u0443 \u0437\u0430\u043F\u0438\u0441\u0438, \u0441\u043A\u043E\u043B\u044C\u043A\u043E
+      \u0441\u0435\u0431\u044F \u043F\u043E\u043C\u043D\u044E. \u0412 \u0442\u0435
+      \u0434\u043D\u0438, \u043A\u043E\u0433\u0434\u0430 \u0436\u0438\u0437\u043D\u044C
+      \u043A\u0430\u0437\u0430\u043B\u0430\u0441\u044C \u043D\u0435\u0432\u044B\u043D\u043E\u0441\u0438\u043C\u043E\u0439,
+      \u044D\u0442\u043E \u0432\u0441\u0435\u0433\u0434\u0430 \u043F\u043E\u043C\u043E\u0433\u0430\u043B\u043E
+      \u043C\u043D\u0435 \u0440\u0430\u0437\u043E\u0431\u0440\u0430\u0442\u044C\u0441\u044F
+      \u0432 \u0441\u0435\u0431\u0435. \u0418 \u0431\u044B\u043B\u043E \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E
+      \u0443\u0436\u0430\u0441\u043D\u043E, \u044F \u0442\u043E\u0433\u0434\u0430
+      \u043F\u043E\u0442\u0435\u0440\u044F\u043B\u0430 \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0435\u0439
+      \u0432 \u043F\u043E\u0436\u0430\u0440\u0435. \u0418 \u044F \u043F\u043E\u0435\u0445\u0430\u043B\u0430
+      \u043A \u0441\u0432\u043E\u0435\u043C\u0443 \u043F\u0430\u0440\u043D\u044E,
+      \u0447\u0442\u043E\u0431\u044B \u043E\u043D \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0430\u043B
+      \u043C\u0435\u043D\u044F \u0432 \u0442\u043E\u0439 \u0442\u0440\u0443\u0434\u043D\u043E\u0439
+      \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u0438, \u043D\u043E \u0437\u0430\u0441\u0442\u0430\u043B\u0430
+      \u0435\u0433\u043E \u0441 \u043B\u044E\u0431\u043E\u0432\u043D\u0438\u0446\u0435\u0439.
+      \u041A\u0430\u043A \u043F\u043E \u0437\u0430\u043A\u043E\u043D\u0443 \u041C\u0451\u0440\u0444\u0438,
+      \u0432\u0441\u0435 \u0431\u0435\u0434\u044B \u043D\u0430\u0447\u0430\u043B\u0438
+      \u0432\u0430\u043B\u0438\u0442\u044C\u0441\u044F \u043D\u0430 \u043C\u0435\u043D\u044F
+      \u043E\u0434\u043D\u0430 \u0437\u0430 \u0434\u0440\u0443\u0433\u043E\u0439.
+      \u0418, \u043A\u0430\u0436\u0435\u0442\u0441\u044F, \u043C\u0435\u043D\u044F
+      \u044D\u0442\u043E \u0441\u043B\u043E\u043C\u0430\u043B\u043E. \u041F\u0435\u043F\u0435\u043B
+      \u043A\u0440\u0443\u0436\u0438\u0442\u0441\u044F \u0432 \u0432\u043E\u0437\u0434\u0443\u0445\u0435
+      \u0441\u043D\u0435\u0436\u0438\u043D\u043A\u0430\u043C\u0438, \u0438 \u044D\u0442\u043E
+      \u043A\u0440\u0430\u0441\u0438\u0432\u043E\u2026 "
+  - chapterName: "\u041E\u0442\u043A\u0440\u043E\u0432\u0435\u043D\u0438\u0435"
+    mainArt: {fileID: 21300000, guid: fdd3fcf5755ee1245833306a5c56499e, type: 3}
     items:
     - name: "\u0413\u043E\u0440\u0441\u0442\u044C \u043F\u0435\u043F\u043B\u0430"
       icon: {fileID: 21300000, guid: 6bebff742f7cf6a4fa410992066cfa9f, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u0424\u0435\u043D\u0438\u043A\u0441 \u0432\u043E\u0437\u0440\u043E\u0436\u0434\u0430\u0435\u0442\u0441\u044F
+        \u0438\u043C\u0435\u043D\u043D\u043E \u0438\u0437 \u043F\u0435\u043F\u043B\u0430.
+        \u0418 \u044F \u0442\u043E\u0436\u0435 \u0441\u043C\u043E\u0433\u0443 \u0432\u043E\u0437\u0440\u043E\u0434\u0438\u0442\u044C\u0441\u044F,
+        \u044F \u0437\u043D\u0430\u044E \u044D\u0442\u043E.\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u0414\u043E\u0441\u043A\u0430"
       icon: {fileID: 21300000, guid: 307f6c1dd29f49f4884ec153c6c3a6f1, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u0414\u043E\u043C \u0441\u0442\u0440\u043E\u0438\u0442\u0441\u044F
+        \u043D\u0435 \u0432 \u043E\u0434\u0438\u043D \u0434\u0435\u043D\u044C, \u043F\u043E\u0441\u0442\u0435\u043F\u0435\u043D\u043D\u043E,
+        \u0430 \u0441\u0433\u043E\u0440\u0430\u0435\u0442 \u0442\u0430\u043A \u0431\u044B\u0441\u0442\u0440\u043E.
+        \u0414\u043E \u0447\u0435\u0433\u043E \u0436\u0435 \u0445\u0440\u0443\u043F\u043A\u0438\u043C
+        \u0431\u044B\u0432\u0430\u0435\u0442 \u0442\u043E, \u0447\u0442\u043E \u043A\u0430\u0436\u0435\u0442\u0441\u044F
+        \u043A\u0440\u0435\u043F\u043A\u0438\u043C.\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u041E\u0431\u043B\u043E\u043C\u043A\u0438 \u043A\u0438\u0440\u043F\u0438\u0447\u0430"
       icon: {fileID: 21300000, guid: 8e5c5bbc7b358bc40998d0b9a58ba07f, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\xAB\u041F\u043E \u043A\u0438\u0440\u043F\u0438\u0447\u0438\u043A\u0443,
+        \u0440\u044F\u0434 \u0437\u0430 \u0440\u044F\u0434\u043E\u043C, \u0441\u0442\u0435\u043D\u0430
+        \u0437\u0430 \u0441\u0442\u0435\u043D\u043E\u0439 \u2013 \u0442\u0430\u043A
+        \u0441\u0442\u0440\u043E\u0438\u0442\u0441\u044F \u0434\u043E\u043C. \u0418
+        \u043C\u044B \u0432\u0441\u044E \u0436\u0438\u0437\u043D\u044C \u0441\u0442\u0440\u043E\u0438\u043C
+        \u0441\u0435\u0431\u044F \u0442\u0430\u043A \u0436\u0435, \u043F\u043E \u043A\u0438\u0440\u043F\u0438\u0447\u0438\u043A\u0443.\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
-    - name: "\u0424\u0443\u043D\u0434\u0430\u043C\u0435\u043D\u0442"
+    - name: "\u0421\u0442\u0435\u043D\u0430"
       icon: {fileID: 21300000, guid: 60a7f3ba161cd7e4faee302d02714422, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u041A\u0440\u0435\u043F\u043A\u0438\u0435 \u0441\u0442\u0435\u043D\u044B
+        \u0437\u0430\u0449\u0438\u0449\u0430\u044E\u0442 \u0442\u0435\u0431\u044F
+        \u043E\u0442 \u0442\u0440\u0435\u0432\u043E\u0433 \u0432\u043D\u0435\u0448\u043D\u0435\u0433\u043E
+        \u043C\u0438\u0440\u0430, \u043E\u0442 \u0445\u043E\u043B\u043E\u0434\u0430
+        \u0438 \u0432\u0435\u0442\u0440\u043E\u0432, \u043E\u0442 \u0437\u043B\u044B\u0445
+        \u0432\u0437\u0433\u043B\u044F\u0434\u043E\u0432 \u0438 \u0442\u0435\u0445,
+        \u043A\u0442\u043E \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u0442 \u0432
+        \u043D\u043E\u0447\u0438.\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
-    - name: "\u0414\u043E\u043C \u042D\u043C\u0438\u043B\u0438"
+    - name: "\u0414\u043E\u043C"
       icon: {fileID: 21300000, guid: 91ccad1ad4babc24ab13ebed850ec12d, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\xAB\u0414\u043E\u043C, \u043C\u0438\u043B\u044B\u0439 \u0434\u043E\u043C.
+        \u0422\u0438\u0445\u0430\u044F \u0433\u0430\u0432\u0430\u043D\u044C \u0438
+        \u043F\u0440\u0438\u044E\u0442 \u0432 \u043E\u043A\u0435\u0430\u043D\u0435
+        \u0436\u0438\u0442\u0435\u0439\u0441\u043A\u0438\u0445 \u0431\u0443\u0440\u044C.\xBB"
       conversationSnippet: Lorem ipsum dolor sit amet...
-    chapterStory: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-      sunt in culpa qui officia deserunt mollit anim id est laborum.
-  - chapterName: "\u0414\u0443\u0448\u0430"
-    mainArt: {fileID: 0}
+    chapterStory: "\u0412\u0441\u0451, \u0447\u0435\u0433\u043E \u044F \u0441\u0435\u0439\u0447\u0430\u0441
+      \u0445\u043E\u0447\u0443 \u2013 \u044D\u0442\u043E \u0440\u0430\u0441\u0442\u0432\u043E\u0440\u0438\u0442\u044C\u0441\u044F
+      \u0432 \u044D\u0442\u043E\u043C \u0445\u043E\u0440\u043E\u0432\u043E\u0434\u0435
+      \u043F\u043B\u0430\u043C\u0435\u043D\u0438, \u0438 \u043D\u0435 \u0432\u0438\u0434\u0435\u0442\u044C\u2026
+      \u043D\u0435 \u0432\u0438\u0434\u0435\u0442\u044C \u043E\u0431\u0443\u0433\u043B\u0435\u043D\u043D\u044B\u0445
+      \u0441\u0442\u0440\u043E\u043F\u0438\u043B, \u0447\u0442\u043E \u0442\u043E\u0440\u0447\u0430\u0442
+      \u0441\u043B\u043E\u0432\u043D\u043E \u043A\u043E\u0441\u0442\u0438\u2026 \u043D\u0435
+      \u0432\u0438\u0434\u0435\u0442\u044C \u043C\u0430\u0448\u0438\u043D \u043F\u043E\u0436\u0430\u0440\u043D\u044B\u0445,
+      \u0437\u0430\u043B\u0438\u0432\u0430\u044E\u0449\u0438\u0445 \u043E\u0441\u0442\u0430\u0442\u043A\u0438
+      \u043D\u0430\u0448\u0435\u0433\u043E \u0434\u043E\u043C\u0430, \u043D\u0435
+      \u0432\u0438\u0434\u0435\u0442\u044C \u043A\u0430\u043A \u0441\u043A\u043E\u0440\u0430\u044F
+      \u043F\u043E\u043C\u043E\u0449\u044C \u0443\u0432\u043E\u0437\u0438\u0442 \u0432
+      \u0431\u043E\u043B\u044C\u043D\u0438\u0446\u0443 \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0435\u0439,
+      \u043D\u0435 \u043E\u0442\u0432\u0435\u0447\u0430\u0442\u044C \u043D\u0430
+      \u0442\u044B\u0441\u044F\u0447\u0443 \u0438\u0434\u0438\u043E\u0442\u0441\u043A\u0438\u0445
+      \u0432\u043E\u043F\u0440\u043E\u0441\u043E\u0432 \u043F\u043E\u043B\u0438\u0446\u0438\u0438\u2026
+      \u0418 \u044F \u0432\u0441\u0451 \u043F\u0438\u0441\u0430\u043B\u0430 \u0438
+      \u043F\u0438\u0441\u0430\u043B\u0430 \u0432 \u0434\u043D\u0435\u0432\u043D\u0438\u043A.
+      \u0422\u043E\u0433\u0434\u0430 \u044F \u043D\u0435 \u0437\u043D\u0430\u043B\u0430,
+      \u0437\u0430\u0447\u0435\u043C\u2026"
+  - chapterName: "\u041E\u0434\u0443\u0448\u0435\u0432\u043B\u0435\u043D\u0438\u0435"
+    mainArt: {fileID: 21300000, guid: cf04e6956fabd144dadad3f018284d0e, type: 3}
     items:
-    - name: "\u041C\u0435\u0434\u0438\u043A\u0430\u043C\u0435\u043D\u0442\u044B"
+    - name: "\u0411\u043B\u0438\u0441\u0442\u0435\u0440 \u0441 \u0442\u0430\u0431\u043B\u0435\u0442\u043A\u0430\u043C\u0438"
       icon: {fileID: 21300000, guid: 5dd363706c46a2143b8e1d8ff972afa0, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u041C\u044B \u0442\u0440\u0430\u0442\u0438\u043C \u0441\u0432\u043E\u0451
+        \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435 \u0441\u043C\u0435\u043B\u043E,
+        \u0431\u0443\u0434\u0442\u043E \u0437\u0430\u043F\u0430\u0441 \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u0435\u043D.
+        \u0420\u043E\u0432\u043D\u043E \u0434\u043E \u0442\u0435\u0445 \u043F\u043E\u0440,
+        \u043F\u043E\u043A\u0430 \u0436\u0438\u0437\u043D\u044C \u043D\u0435 \u0432\u044B\u0441\u0442\u0430\u0432\u0438\u0442
+        \u0441\u0447\u0451\u0442.\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
-    - name: "\u0410\u043B\u043A\u043E\u0433\u043E\u043B\u044C"
+    - name: "\u0411\u0443\u0442\u044B\u043B\u043A\u0430 \u0430\u043B\u043A\u043E\u0433\u043E\u043B\u044F"
       icon: {fileID: 21300000, guid: a864ba94476e49a4b836f975f4ac8e7e, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u041C\u044B \u043F\u044B\u0442\u0430\u0435\u043C\u0441\u044F
+        \u0443\u0442\u043E\u043F\u0438\u0442\u044C \u0441\u0432\u043E\u0438\u0445
+        \u0434\u0435\u043C\u043E\u043D\u043E\u0432 \u0432 \u0430\u043B\u043A\u043E\u0433\u043E\u043B\u0435,
+        \u043D\u0435 \u0434\u0443\u043C\u0430\u044F \u043E \u0442\u043E\u043C, \u0447\u0442\u043E
+        \u043E\u043D\u0438 \u043F\u0440\u0435\u043A\u0440\u0430\u0441\u043D\u043E
+        \u0443\u043C\u0435\u044E\u0442 \u043F\u043B\u0430\u0432\u0430\u0442\u044C.\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u041C\u043E\u043B\u043D\u0438\u044F"
       icon: {fileID: 21300000, guid: e1a152101db8465498dea30ab9add8ff, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u041C\u044B \u043D\u0435 \u0437\u043D\u0430\u0435\u043C,
+        \u043A\u043E\u0433\u0434\u0430 \u0438\u043C\u0435\u043D\u043D\u043E \u0436\u0438\u0437\u043D\u044C
+        \u0431\u0443\u0434\u0435\u0442 \u0440\u0430\u0441\u0441\u0435\u0447\u0435\u043D\u0430
+        \u043D\u0430 \u201C\u0434\u043E\u201D \u0438 \u201C\u043F\u043E\u0441\u043B\u0435\u201D.\u041F\u0435\u0440\u0435\u043B\u043E\u043C\u043D\u044B\u0435
+        \u043C\u043E\u043C\u0435\u043D\u0442\u044B \u0432\u0441\u0435\u0433\u0434\u0430
+        \u043D\u0435\u043E\u0436\u0438\u0434\u0430\u043D\u043D\u044B. \u041A\u0430\u043A
+        \u0433\u0440\u043E\u043C \u0441\u0440\u0435\u0434\u0438 \u044F\u0441\u043D\u043E\u0433\u043E
+        \u043D\u0435\u0431\u0430.\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u042D\u043A\u0442\u043E\u043F\u043B\u0430\u0437\u043C\u0430"
       icon: {fileID: 21300000, guid: 8a3fbf51897c07a458f7268f10cb56bc, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u041C\u044B \u0447\u0430\u0441\u0442\u043E \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u043C
+        \u0434\u0440\u0443\u0433\u0438\u0445 \u043F\u043E\u0441\u043B\u0435 \u0441\u043C\u0435\u0440\u0442\u0438
+        \u043A\u0430\u043A \u044D\u0434\u0430\u043A\u043E\u0435 \u0441\u0442\u0440\u0430\u0448\u043D\u043E\u0435
+        \u043F\u0440\u0438\u0432\u0438\u0434\u0435\u043D\u0438\u0435. \u041D\u043E
+        \u043A\u0442\u043E \u0437\u043D\u0430\u0435\u0442 \u043D\u0430\u0432\u0435\u0440\u043D\u044F\u043A\u0430,
+        \u043A\u0430\u043A \u0432\u044B\u0433\u043B\u044F\u0434\u0438\u0442 \u0434\u0443\u0448\u0430?\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u0413\u043E\u0440\u044F\u0449\u0438\u0435 \u0433\u043B\u0430\u0437\u0430"
       icon: {fileID: 21300000, guid: 216d04711e07fe14f99b7a7242351a60, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u041C\u044B \u043E\u0436\u0438\u0434\u0430\u0435\u043C,
+        \u0447\u0442\u043E \u0432 \u043C\u043E\u043C\u0435\u043D\u0442 \u043F\u0440\u043E\u0437\u0440\u0435\u043D\u0438\u044F
+        \u043F\u0440\u0438\u0434\u0451\u0442 \u0440\u0435\u0448\u0435\u043D\u0438\u0435
+        \u0434\u043B\u044F \u0432\u0441\u0435\u0445 \u0436\u0438\u0437\u043D\u0435\u043D\u043D\u044B\u0445
+        \u0432\u043E\u043F\u0440\u043E\u0441\u043E\u0432. \u0418 \u043A\u043E\u0433\u0434\u0430
+        \u044D\u0442\u043E\u0433\u043E \u043D\u0435 \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0434\u0438\u0442,
+        \u0440\u0430\u0441\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u043C\u0441\u044F.
+        \u041D\u043E \u0441\u0442\u043E\u0438\u0442 \u043B\u0438?\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
-    chapterStory: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-      sunt in culpa qui officia deserunt mollit anim id est laborum.
-  - chapterName: "\u0422\u0435\u043B\u043E"
-    mainArt: {fileID: 0}
+    chapterStory: "\u0411\u043E\u0436\u0435, \u044F \u043F\u0438\u0441\u0430\u043B\u0430
+      \u044D\u0442\u043E \u0442\u043E\u0433\u0434\u0430: \u201C\u2026\u0434\u043E\u0440\u0440\u0433\u043E\u0439
+      \u0434\u043D\u0435\u0432\u043D\u043A! \u0414\u0441\u0442\u0430\u044E \u044F
+      \u0442\u0435\u0431\u044F \u0432\u0441\u0451 \u0440\u0435\u0436\u0435, \u0438\u0437\u0432\u0438\u043D\u0442\u0438\u043B\u044F\u044E\u0441\u044C!
+      \u0416\u0438\u0437\u043D\u044C \u043C\u043E\u044F \u043B\u0435\u0442\u0438\u0442
+      \u0432 \u0410\u0414, \u044F \u043B\u0438\u0448\u044C \u0432\u0438\u0431\u0438\u0440\u0430\u044E
+      \u043F\u043E\u0434\u0445\u043E\u0434\u044F\u0449\u0443\u044E \u043C\u0443\u0437\u043A\u0443.
+      \u041C\u0430\u043C\u0430 \u043D\u0435 \u0441\u043F\u0440\u0430\u0432\u0438\u043B\u0430\u0441\u044C.
+      \u041E\u0442\u0435\u0446 \u0449\u0451 \u0434\u044B\u0448\u0438\u0442. \u0412\u0440\u0430\u0447\u0438\u2026
+      \u0414\u0447\u0442\u043E \u0442\u0430\u043C, \u043E\u043D\u0438 \u0436\u0435
+      \u0433\u043E\u0432\u043E\u0440\u0438\u043B\u0438 \xAB\u0432\u043E\u0442 \u0442\u0430\u0431\u043B\u0442\u043A\u0438,
+      \u043F\u0435\u0439\u0442\u0435\u0438 \u0443\u0441\u043F\u043E\u043A\u043E\u0438\u0442\u0435\u0441\u044C\u2026\xBB.
+      \u0410 \u043A\u0442\u043E \u0441\u043A\u0430\u0436\u0435\u0442 \u0447\u0442\u043E
+      \u0434\u0435\u043B\u0430\u0442\u044C \u043A\u043E\u0433\u0434\u0430 \u043C\u0430\u0442\u044C
+      \u043F\u0440\u0445\u043E\u0434\u0438\u0442 \u0432\u043E \u0441\u043D\u0430\u0445?
+      \u041A\u0430\u043A \u0443\u043B\u0430\u0431\u0430\u0442\u044C\u0441\u044F \u043B\u044E\u0434\u044F\u043C
+      \u043D\u0430 \u0440\u0430\u0431\u043E\u0442\u0435? \u0427\u0442\u043E \u043E\u0442\u0432\u0447\u0430\u0442\u044C
+      \u0434\u0440\u0440\u0443\u0437\u044C\u044F\u043C \u043D\u0430 \u0438\u0445
+      \u0433\u0440\u0443\u0441\u0442\u043D\u044B\u0435 \u0441\u043E\u0431\u0430\u0447\u044C\u0438
+      \u0433\u043B\u0430\u0437\u0430, \u0438 \u0432\u043E\u0442 \u044D\u0442\u043E
+      \xAB\u0441\u043E\u0431\u043E\u043B\u0435\u0437\u043D\u0443\u044E\xBB?!? \u0415\u0441\u043B\u0438
+      \u0431\u044B \u0437\u0430 \u043A\u0430\u0436\u0434\u043E\u0435 \xAB\u0441\u043E\u0431\u043E\u043B\u0435\u0437\u043D\u0443\u044E\xBB
+      \u043C\u043D\u0435 \u0434\u0430\u0432\u0430\u043B\u0438 \u0434\u043E\u043B\u043B\u0430\u0440,
+      \u044F \u0431\u044B \u043A\u0443\u043F\u0438\u043B\u0430 \u0431\u0443\u0445\u043B\u0430.
+      \u0421\u043E\u0431\u0441\u0442\u0432\u043D\u043D\u043E, \u0442\u0430\u043A
+      \u0432 \u0438\u0442\u043E\u0433\u0435 \u044F\u0438\u0441\u0434\u0435\u043B\u0430\u043B\u0430.
+      \u0412\u0441\u0451 \u043A \u0445\u0435\u0440\u0430\u043C! \u0418\u043B\u0438
+      \u043D\u0435 \u0432\u0441\u0451. \u0413\u043E\u0441\u043F\u043E\u0434\u0438,
+      \u0410\u043A\u0432\u0430\u043C\u0435\u043D, \u0417\u0435\u043B\u0438\u0431\u043E\u0431\u0430,
+      \u043A\u0442\u043E \u0443\u0433\u043E\u0434\u043D\u043E, \u0435\u0441\u043B\u0438
+      \u0442\u044B \u0435\u0441\u0442\u044C \u2013 \u043F\u043E\u043C\u043E\u0433\u0438
+      \u043C\u043D\u0435 \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430.
+      \u042F \u043D\u0435 \u0432\u044B\u0432\u043E\u0436\u0443.\u201D"
+  - chapterName: "\u041E\u0436\u0438\u0432\u043B\u0435\u043D\u0438\u0435"
+    mainArt: {fileID: 21300000, guid: 030b80b4b8c0a944a977bee8f3bae060, type: 3}
     items:
     - name: "\u041A\u043E\u0441\u0442\u0438"
       icon: {fileID: 21300000, guid: 532f1580b5fb4194bac5efb7a7d9bfa4, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u0421\u043A\u0435\u043B\u0435\u0442. \u0422\u043E\u0442
+        \u0441\u0430\u043C\u044B\u0439 \u0432\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439
+        \u0441\u0442\u0435\u0440\u0436\u0435\u043D\u044C, \u0447\u0442\u043E \u0434\u0435\u0440\u0436\u0438\u0442
+        \u043D\u0430\u0441 \u043D\u0430 \u0445\u043E\u0434\u0443.\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u041F\u0430\u043A\u0435\u0442 \u043A\u0440\u043E\u0432\u0438"
       icon: {fileID: 21300000, guid: fd1e07b30449c5b4ea70f6f820ee2bb5, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u0427\u0435\u043B\u043E\u0432\u0435\u043A \u2013 \u043F\u0440\u043E\u0441\u0442\u043E
+        \u043C\u0435\u0448\u043E\u043A \u043A\u043E\u0441\u0442\u0435\u0439 \u0438
+        \u0431\u0430\u043D\u043A\u0430 \u043A\u0440\u043E\u0432\u0438, \u0434\u0430?\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\u0421\u0435\u0440\u0434\u0446\u0435"
       icon: {fileID: 21300000, guid: 9294e224965535d41a22c8189797b742, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u0422\u043E, \u0447\u0442\u043E \u0437\u0430\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442
+        \u043A\u0440\u043E\u0432\u044C \u0431\u0435\u0436\u0430\u0442\u044C. \u0421
+        \u043A\u0430\u0436\u0434\u044B\u043C \u0435\u0433\u043E \u0443\u0434\u0430\u0440\u043E\u043C
+        \u0436\u0438\u0437\u043D\u044C \u0432\u0441\u0451 \u0431\u043B\u0438\u0436\u0435
+        \u0438 \u0431\u043B\u0438\u0436\u0435.\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
     - name: "\"\u0421\u0438\u043D\u044F\u044F \u0438\u0437\u043E\u043B\u0435\u043D\u0442\u0430\""
       icon: {fileID: 21300000, guid: 0925c283a7ad28444bb74a0740988547, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u041A\u0430\u043A \u0438\u0437\u0432\u0435\u0441\u0442\u043D\u043E,
+        \u0447\u0442\u043E \u0443\u0433\u043E\u0434\u043D\u043E \u043C\u043E\u0436\u043D\u043E
+        \u043F\u043E\u0447\u0438\u043D\u0438\u0442\u044C \u043F\u0440\u0438 \u043F\u043E\u043C\u043E\u0449\u0438
+        \u0441\u0438\u043D\u0435\u0439 \u0438\u0437\u043E\u043B\u0435\u043D\u0442\u044B.
+        \u041C\u043E\u0436\u0435\u0442, \u0438 \u043C\u0435\u043D\u044F \u043C\u043E\u0436\u043D\u043E?\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
-    - name: "\u042D\u043C\u0438\u043B\u0438"
+    - name: "\u0422\u0435\u043B\u043E"
       icon: {fileID: 21300000, guid: 9a079be116ede8e4884192589ee419d9, type: 3}
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      description: "\u201C\u042D\u0442\u043E \u044F!\u201D"
       conversationSnippet: Lorem ipsum dolor sit amet...
-    chapterStory: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-      sunt in culpa qui officia deserunt mollit anim id est laborum.
+    chapterStory: "\u0416\u0438\u0442\u044C. \u0414\u0440\u043E\u0436\u0430\u0449\u0438\u043C\u0438
+      \u0440\u0443\u043A\u0430\u043C\u0438 \u044F \u0432\u044B\u0432\u043E\u0436\u0443
+      \u044D\u0442\u043E \u0441\u043B\u043E\u0432\u043E. \u0418 \u0433\u043E\u0442\u043E\u0432\u0430
+      \u043F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u044C \u0435\u0433\u043E \u0435\u0449\u0451
+      \u043C\u0438\u043B\u043B\u0438\u043E\u043D \u0440\u0430\u0437. \u0416\u0438\u0442\u044C\u0436\u0438\u0442\u044C\u0436\u0438\u0442\u044C\u0436\u0438\u0442\u044C.
+      \u041C\u043D\u0435 \u043F\u0440\u0438\u0448\u043B\u043E\u0441\u044C \u043E\u043A\u0443\u043D\u0443\u0442\u044C\u0441\u044F
+      \u0432 \u0432\u043E\u0441\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u044F
+      \u0438 \u043F\u0440\u043E\u0439\u0442\u0438 \u0447\u0435\u0440\u0435\u0437
+      \u0432\u0441\u0451 \u0441\u043D\u043E\u0432\u0430, \u0447\u0442\u043E\u0431\u044B
+      \u0432\u0441\u0451 \u043F\u0435\u0440\u0435\u043E\u0441\u043C\u044B\u0441\u043B\u0438\u0442\u044C.
+      \u041F\u043E\u0447\u0435\u043C\u0443 \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u0443
+      \u043D\u0443\u0436\u043D\u043E \u0432\u0441\u0451 \u043F\u043E\u0442\u0435\u0440\u044F\u0442\u044C,
+      \u0447\u0442\u043E\u0431\u044B \u043D\u0430\u0447\u0430\u0442\u044C \u0446\u0435\u043D\u0438\u0442\u044C
+      \u0436\u0438\u0437\u043D\u044C? \u0425\u043E\u0442\u044C \u043C\u043E\u0438
+      \u0440\u0443\u043A\u0438 \u0434\u0440\u043E\u0436\u0430\u0442, \u0438 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0430
+      \u0440\u0430\u0437\u0431\u0443\u0445\u043B\u0430 \u043E\u0442 \u0441\u043B\u0451\u0437,
+      \u044F \u0433\u043E\u0442\u043E\u0432\u0430 \u0441\u043E\u0447\u0438\u043D\u0438\u0442\u044C
+      \u0435\u0449\u0451 \u0442\u044B\u0441\u044F\u0447\u0443 \u043F\u043E\u0432\u043E\u0434\u043E\u0432
+      \u0436\u0438\u0442\u044C. \u041F\u0443\u0441\u0442\u044C \u044F \u0443\u0436\u0435
+      \u043D\u0435 \u0442\u0430, \u0447\u0442\u043E \u0440\u0430\u043D\u044C\u0448\u0435,
+      \u0442\u0435\u043F\u0435\u0440\u044C \u044F \u0431\u0443\u0434\u0443 \u0436\u0438\u0442\u044C
+      \u0438\u0437\u043E \u0432\u0441\u0435\u0445 \u0441\u0438\u043B. \u0417\u0430
+      \u0441\u0435\u0431\u044F, \u0437\u0430 \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0435\u0439,
+      \u0437\u0430 \u0442\u0435\u0445, \u043A\u0442\u043E \u043D\u0435 \u0443\u0441\u043F\u0435\u043B
+      \u0440\u0430\u0441\u043F\u0440\u043E\u0431\u043E\u0432\u0430\u0442\u044C \u0432\u043A\u0443\u0441
+      \u0436\u0438\u0437\u043D\u0438 \u043F\u0435\u0440\u0435\u0434 \u0442\u0435\u043C,
+      \u043A\u0430\u043A \u0441\u0432\u0435\u0442 \u043F\u043E\u0433\u0430\u0441.
+      \u0412\u0442\u043E\u0440\u043E\u0439 \u0448\u0430\u043D\u0441 \u043D\u0435
+      \u0434\u0430\u0451\u0442\u0441\u044F \u043F\u0440\u043E\u0441\u0442\u043E \u0442\u0430\u043A,
+      \u043D\u043E \u0435\u0441\u043B\u0438 \u0432\u0435\u0440\u0438\u0442\u044C
+      \u0438 \u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F \u043A \u0446\u0435\u043B\u0438
+      \u2013 \u043E\u043D \u0432\u043E\u0437\u043C\u043E\u0436\u0435\u043D. \u042D\u0442\u043E\u0442
+      \u0434\u0435\u043D\u044C \u044F \u043E\u0431\u0432\u0435\u0434\u0443 \u043A\u0440\u0430\u0441\u043D\u044B\u043C
+      \u0432 \u043A\u0430\u043B\u0435\u043D\u0434\u0430\u0440\u0435 \u0438 \u0431\u0443\u0434\u0443
+      \u043F\u0440\u0430\u0437\u0434\u043D\u043E\u0432\u0430\u0442\u044C \u0434\u043E
+      \u043A\u043E\u043D\u0446\u0430 \u0441\u0432\u043E\u0438\u0445 \u0434\u043D\u0435\u0439.
+      \u041C\u043E\u0439 \u0432\u0442\u043E\u0440\u043E\u0439 \u0434\u0435\u043D\u044C
+      \u0440\u043E\u0436\u0434\u0435\u043D\u0438\u044F. \u042F \u0436\u0438\u0432\u0430."
