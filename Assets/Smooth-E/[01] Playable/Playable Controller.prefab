@@ -49,3 +49,4 @@ MonoBehaviour:
   fieldHeight: 0
   itemPrefab: {fileID: 1193617411796336273, guid: 8e173d89797c6b1419dbc4344e59dd0a, type: 3}
   itemsParent: {fileID: 4989181081164768435}
+  lockedCellPrefab: {fileID: 1616338233779171902, guid: 1266c9457f05ada43838db9152ffd776, type: 3}

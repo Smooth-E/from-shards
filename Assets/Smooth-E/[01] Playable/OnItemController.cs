@@ -72,12 +72,21 @@ public class OnItemController : MonoBehaviour
 
     void Update()
     {
-        itemData = DataManager.instance.levels[PlayableSceneManager.levelIndex].items[id];
-        GetComponent<SpriteRenderer>().sprite = itemData.icon;
+        if (id != -1)
+        {
+            itemData = DataManager.instance.levels[PlayableSceneManager.levelIndex].items[id];
+            GetComponent<SpriteRenderer>().sprite = itemData.icon;
 
-        var t = myDescriptionSnippet.transform.GetChild(0).GetComponentsInChildren<FancyText>();
-        t[0].textString = itemData.name;
-        t[1].textString = itemData.description;
+            var t = myDescriptionSnippet.transform.GetChild(0).GetComponentsInChildren<FancyText>();
+            t[0].textString = itemData.name;
+            t[1].textString = itemData.description;
+        }
+        else
+        {
+            var t = myDescriptionSnippet.transform.GetChild(0).GetComponentsInChildren<FancyText>();
+            t[0].textString = "Заблокированная клетка";
+            t[1].textString = "Описание заблокированной клетки";
+        }
 
 
         int x = -1, y = -1;

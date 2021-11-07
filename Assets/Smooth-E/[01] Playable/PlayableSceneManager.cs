@@ -9,6 +9,7 @@ public class PlayableSceneManager : MonoBehaviour
     public static int levelIndex = 0; //Это число выставляется перед запуском сцены из меню
     public static int itemsSpawnedOnStart = 3; //Количество вещей на старте уровня
     public static int maxItemLevelToSpawn = 0; //Максимальный уровень вещи, который можно спавнить (начинается с 0)
+    static public int blockedCellsOnLevel = 1 * (levelIndex + 1); //Зависимость количества блоков от номера уровня
 
     [Header("System Information:"), Space(10)]
     public Transform playfieldParent;
@@ -18,6 +19,7 @@ public class PlayableSceneManager : MonoBehaviour
     public Vector2[,] cellPositions;
     public static PlayableSceneManager instance;
     public Transform itemsParent;
+    public GameObject lockedCellPrefab;
 
     enum Action : int
     {
@@ -57,6 +59,15 @@ public class PlayableSceneManager : MonoBehaviour
             item.GetComponent<OnItemController>().id = Random.Range(0, maxItemLevelToSpawn + 1);
             playField[x, y] = item.GetComponent<OnItemController>();
         }
+
+        for (int i = 0; i < blockedCellsOnLevel; i++)
+        {
+            var position = getRandomPositionOnField();
+            int x = position[0], y = position[1];
+            var item = Instantiate(lockedCellPrefab, itemsParent);
+            item.transform.position = cellPositions[x, y];
+            playField[x, y] = item.GetComponent<OnItemController>();
+        }
     }
 
     int[] getRandomPositionOnField()
@@ -93,7 +104,8 @@ public class PlayableSceneManager : MonoBehaviour
                 {
                     if (playField[x, y] != null)
                     {
-                        if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id || x == prevX)
+                        if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id 
+                            || playField[prevX, prevY].id == -1 || x == prevX)
                         {
                             prevY = y;
                             prevX = x;
@@ -116,7 +128,7 @@ public class PlayableSceneManager : MonoBehaviour
             {
                 for (int x = 1; x < playField.GetLength(0); x++)
                 {
-                    if (playField[x, y] != null)
+                    if (playField[x, y] != null && playField[x, y].id != -1)
                     {
                         while (x > 0)
                         {
@@ -145,7 +157,8 @@ public class PlayableSceneManager : MonoBehaviour
                 {
                     if (playField[x, y] != null)
                     {
-                        if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id || x == prevX)
+                        if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id 
+                            || playField[prevX, prevY].id == -1 || x == prevX)
                         {
                             prevY = y;
                             prevX = x;
@@ -168,7 +181,7 @@ public class PlayableSceneManager : MonoBehaviour
             {
                 for (int x = playField.GetLength(0) - 2; x >= 0; x--)
                 {
-                    if (playField[x, y] != null)
+                    if (playField[x, y] != null && playField[x, y].id != -1)
                     {
                         while (x < playField.GetLength(0) - 1)
                         {
@@ -197,7 +210,8 @@ public class PlayableSceneManager : MonoBehaviour
                 {
                     if (playField[x, y] != null)
                     {
-                        if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id || y == prevY)
+                        if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id
+                            || playField[prevX, prevY].id == -1 || y == prevY)
                         {
                             prevY = y;
                             prevX = x;
@@ -220,7 +234,7 @@ public class PlayableSceneManager : MonoBehaviour
             {
                 for (int y = playField.GetLength(0) - 2; y >= 0; y--)
                 {
-                    if (playField[x, y] != null)
+                    if (playField[x, y] != null && playField[x, y].id != -1)
                     {
                         while (y < playField.GetLength(0) - 1)
                         {
@@ -250,7 +264,8 @@ public class PlayableSceneManager : MonoBehaviour
                 {
                     if (playField[x, y] != null)
                     {
-                        if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id || y == prevY)
+                        if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id
+                            || playField[prevX, prevY].id == -1 || y == prevY)
                         {
                             prevY = y;
                             prevX = x;
@@ -273,7 +288,7 @@ public class PlayableSceneManager : MonoBehaviour
             {
                 for (int y = 1; y < playField.GetLength(1); y++)
                 {
-                    if (playField[x, y] != null)
+                    if (playField[x, y] != null && playField[x, y].id != -1)
                     {
                         while (y > 0)
                         {
