@@ -102,9 +102,9 @@ public class OnItemController : MonoBehaviour
             float diffY = transform.position.y - cellPosition.y;
             float newX, newY;
             if (step > Mathf.Abs(diffX)) newX = cellPosition.x;
-            else newX = transform.position.x - step * (transform.position.x / Mathf.Abs(transform.position.x));
+            else newX = transform.position.x - step * (diffX / Mathf.Abs(diffX));
             if (step > Mathf.Abs(diffY)) newY = cellPosition.y;
-            else newY = transform.position.y - step * (transform.position.y / Mathf.Abs(transform.position.y));
+            else newY = transform.position.y - step * (diffY / Mathf.Abs(diffY));
             transform.position = new Vector2(newX, newY);
         }
 
