@@ -71,12 +71,15 @@ public class PlayableSceneManager : MonoBehaviour
 
     void SpawnItem()
     {
-        var position = getRandomPositionOnField();
-        int x = position[0], y = position[1];
-        var item = Instantiate(itemPrefab, itemsParent);
-        item.transform.position = cellPositions[x, y];
-        item.GetComponent<OnItemController>().id = Random.Range(0, maxItemLevelToSpawn + 1);
-        playField[x, y] = item.GetComponent<OnItemController>();
+        for (int i = 0; i < 3; i++)
+        {
+            var position = getRandomPositionOnField();
+            int x = position[0], y = position[1];
+            var item = Instantiate(itemPrefab, itemsParent);
+            item.transform.position = cellPositions[x, y];
+            item.GetComponent<OnItemController>().id = Random.Range(0, maxItemLevelToSpawn + 1);
+            playField[x, y] = item.GetComponent<OnItemController>();
+        }
     }
 
     void Update()
