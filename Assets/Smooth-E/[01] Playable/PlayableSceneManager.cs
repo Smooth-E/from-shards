@@ -20,6 +20,7 @@ public class PlayableSceneManager : MonoBehaviour
     public static PlayableSceneManager instance;
     public Transform itemsParent;
     public GameObject lockedCellPrefab;
+    bool canPlay = true;
 
     enum Action : int
     {
@@ -72,11 +73,27 @@ public class PlayableSceneManager : MonoBehaviour
 
     int[] getRandomPositionOnField()
     {
-        while (true)
+        bool haveEmptyCell = false;
+        foreach (OnItemController controller in playField)
         {
-            var x = Random.Range(0, fieldWidth);
-            var y = Random.Range(0, fieldHeight);
-            if (playField[x, y] == null) return new int[] { x, y };
+            if (controller == null)
+            {
+                haveEmptyCell = true;
+                break;
+            }
+        }
+        if (haveEmptyCell)
+        {
+            while (true)
+            {
+                var x = Random.Range(0, fieldWidth);
+                var y = Random.Range(0, fieldHeight);
+                if (playField[x, y] == null) return new int[] { x, y };
+            }
+        }
+        else
+        {
+            return null;
         }
     }
 
@@ -85,227 +102,239 @@ public class PlayableSceneManager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             var position = getRandomPositionOnField();
-            int x = position[0], y = position[1];
-            var item = Instantiate(itemPrefab, itemsParent);
-            item.transform.position = cellPositions[x, y];
-            item.GetComponent<OnItemController>().id = Random.Range(0, maxItemLevelToSpawn + 1);
-            playField[x, y] = item.GetComponent<OnItemController>();
+            if (position != null)
+            {
+                int x = position[0], y = position[1];
+                var item = Instantiate(itemPrefab, itemsParent);
+                item.transform.position = cellPositions[x, y];
+                item.GetComponent<OnItemController>().id = Random.Range(0, maxItemLevelToSpawn + 1);
+                playField[x, y] = item.GetComponent<OnItemController>();
+            }
+            else
+            {
+                canPlay = false;
+                SceneManagerPlayable.LoadScene(0); //Вставить сюда индекс сцены с проигрышем
+                break;
+            }
         }
     }
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))
+        if (canPlay)
         {
-            for (int y = 0; y < playField.GetLength(1); y++)
+            if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))
             {
-                int prevX = 0, prevY = 0;
-                for (int x = 0; x < playField.GetLength(0); x++)
-                {
-                    if (playField[x, y] != null)
-                    {
-                        if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id 
-                            || playField[prevX, prevY].id == -1 || x == prevX)
-                        {
-                            prevY = y;
-                            prevX = x;
-                        }
-                        else
-                        {
-                            playField[x, y].FadeAndDestroy();
-                            //Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
-                            playField[x, y] = null;
-                            playField[prevX, prevY].id += 1;
-                            prevX = x;
-                            prevY = y;
-                        }
-                    }
-                }
-            }
-
-            //Подвинем все обьекты до упора влево
-            for (int y = 0; y < playField.GetLength(1); y++)
-            {
-                for (int x = 1; x < playField.GetLength(0); x++)
-                {
-                    if (playField[x, y] != null && playField[x, y].id != -1)
-                    {
-                        while (x > 0)
-                        {
-                            if (playField[x - 1, y] == null)
-                            {
-                                playField[x - 1, y] = playField[x, y];
-                                playField[x, y] = null;
-                            }
-                            else break;
-                            x--;
-                        }
-                    }
-                }
-            }
-
-            SpawnItem();
-
-        }
-
-        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
-        {
-            for (int y = 0; y < playField.GetLength(1); y++)
-            {
-                int prevX = 0, prevY = 0;
-                for (int x = playField.GetLength(0) - 1; x >= 0; x--)
-                {
-                    if (playField[x, y] != null)
-                    {
-                        if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id 
-                            || playField[prevX, prevY].id == -1 || x == prevX)
-                        {
-                            prevY = y;
-                            prevX = x;
-                        }
-                        else
-                        {
-                            playField[x, y].FadeAndDestroy();
-                            //Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
-                            playField[x, y] = null;
-                            playField[prevX, prevY].id += 1;
-                            prevX = x;
-                            prevY = y;
-                        }
-                    }
-                }
-            }
-
-            //Подвинем все обьекты до упора вправо (?)
-            for (int y = 0; y < playField.GetLength(1); y++)
-            {
-                for (int x = playField.GetLength(0) - 2; x >= 0; x--)
-                {
-                    if (playField[x, y] != null && playField[x, y].id != -1)
-                    {
-                        while (x < playField.GetLength(0) - 1)
-                        {
-                            if (playField[x + 1, y] == null)
-                            {
-                                playField[x + 1, y] = playField[x, y];
-                                playField[x, y] = null;
-                            }
-                            else break;
-                            x++;
-                        }
-                    }
-                }
-            }
-
-            SpawnItem();
-
-        }
-
-        if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
-        {
-            for (int x = 0; x < playField.GetLength(0); x++)
-            {
-                int prevX = 0, prevY = 0;
-                for (int y = playField.GetLength(1) - 1; y >= 0; y--)
-                {
-                    if (playField[x, y] != null)
-                    {
-                        if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id
-                            || playField[prevX, prevY].id == -1 || y == prevY)
-                        {
-                            prevY = y;
-                            prevX = x;
-                        }
-                        else
-                        {
-                            playField[x, y].FadeAndDestroy();
-                            //Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
-                            playField[x, y] = null;
-                            playField[prevX, prevY].id += 1;
-                            prevX = x;
-                            prevY = y;
-                        }
-                    }
-                }
-            }
-
-            //Подвинем все обьекты до упора вниз (?)
-            for (int x = 0; x < playField.GetLength(1); x++)
-            {
-                for (int y = playField.GetLength(0) - 2; y >= 0; y--)
-                {
-                    if (playField[x, y] != null && playField[x, y].id != -1)
-                    {
-                        while (y < playField.GetLength(0) - 1)
-                        {
-                            if (playField[x, y + 1] == null)
-                            {
-                                playField[x, y + 1] = playField[x, y];
-                                playField[x, y] = null;
-                            }
-                            else break;
-                            y++;
-                        }
-                    }
-                }
-            }
-
-            SpawnItem();
-
-        }
-
-
-        if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))
-        {
-            for (int x = 0; x < playField.GetLength(0); x++)
-            {
-                int prevX = 0, prevY = 0;
                 for (int y = 0; y < playField.GetLength(1); y++)
                 {
-                    if (playField[x, y] != null)
+                    int prevX = 0, prevY = 0;
+                    for (int x = 0; x < playField.GetLength(0); x++)
                     {
-                        if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id
-                            || playField[prevX, prevY].id == -1 || y == prevY)
+                        if (playField[x, y] != null)
                         {
-                            prevY = y;
-                            prevX = x;
-                        }
-                        else
-                        {
-                            playField[x, y].FadeAndDestroy();
-                            //Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
-                            playField[x, y] = null;
-                            playField[prevX, prevY].id += 1;
-                            prevX = x;
-                            prevY = y;
-                        }
-                    }
-                }
-            }
-
-            //Подвинем все обьекты до упора вниз (?)
-            for (int x = 0; x < playField.GetLength(1); x++)
-            {
-                for (int y = 1; y < playField.GetLength(1); y++)
-                {
-                    if (playField[x, y] != null && playField[x, y].id != -1)
-                    {
-                        while (y > 0)
-                        {
-                            if (playField[x, y - 1] == null)
+                            if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id
+                                || playField[prevX, prevY].id == -1 || x == prevX)
                             {
-                                playField[x, y - 1] = playField[x, y];
-                                playField[x, y] = null;
+                                prevY = y;
+                                prevX = x;
                             }
-                            else break;
-                            y--;
+                            else
+                            {
+                                playField[x, y].FadeAndDestroy();
+                                //Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
+                                playField[x, y] = null;
+                                playField[prevX, prevY].id += 1;
+                                prevX = x;
+                                prevY = y;
+                            }
                         }
                     }
                 }
+
+                //Подвинем все обьекты до упора влево
+                for (int y = 0; y < playField.GetLength(1); y++)
+                {
+                    for (int x = 1; x < playField.GetLength(0); x++)
+                    {
+                        if (playField[x, y] != null && playField[x, y].id != -1)
+                        {
+                            while (x > 0)
+                            {
+                                if (playField[x - 1, y] == null)
+                                {
+                                    playField[x - 1, y] = playField[x, y];
+                                    playField[x, y] = null;
+                                }
+                                else break;
+                                x--;
+                            }
+                        }
+                    }
+                }
+
+                SpawnItem();
+
             }
 
-            SpawnItem();
+            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
+            {
+                for (int y = 0; y < playField.GetLength(1); y++)
+                {
+                    int prevX = 0, prevY = 0;
+                    for (int x = playField.GetLength(0) - 1; x >= 0; x--)
+                    {
+                        if (playField[x, y] != null)
+                        {
+                            if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id
+                                || playField[prevX, prevY].id == -1 || x == prevX)
+                            {
+                                prevY = y;
+                                prevX = x;
+                            }
+                            else
+                            {
+                                playField[x, y].FadeAndDestroy();
+                                //Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
+                                playField[x, y] = null;
+                                playField[prevX, prevY].id += 1;
+                                prevX = x;
+                                prevY = y;
+                            }
+                        }
+                    }
+                }
 
+                //Подвинем все обьекты до упора вправо (?)
+                for (int y = 0; y < playField.GetLength(1); y++)
+                {
+                    for (int x = playField.GetLength(0) - 2; x >= 0; x--)
+                    {
+                        if (playField[x, y] != null && playField[x, y].id != -1)
+                        {
+                            while (x < playField.GetLength(0) - 1)
+                            {
+                                if (playField[x + 1, y] == null)
+                                {
+                                    playField[x + 1, y] = playField[x, y];
+                                    playField[x, y] = null;
+                                }
+                                else break;
+                                x++;
+                            }
+                        }
+                    }
+                }
+
+                SpawnItem();
+
+            }
+
+            if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
+            {
+                for (int x = 0; x < playField.GetLength(0); x++)
+                {
+                    int prevX = 0, prevY = 0;
+                    for (int y = playField.GetLength(1) - 1; y >= 0; y--)
+                    {
+                        if (playField[x, y] != null)
+                        {
+                            if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id
+                                || playField[prevX, prevY].id == -1 || y == prevY)
+                            {
+                                prevY = y;
+                                prevX = x;
+                            }
+                            else
+                            {
+                                playField[x, y].FadeAndDestroy();
+                                //Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
+                                playField[x, y] = null;
+                                playField[prevX, prevY].id += 1;
+                                prevX = x;
+                                prevY = y;
+                            }
+                        }
+                    }
+                }
+
+                //Подвинем все обьекты до упора вниз (?)
+                for (int x = 0; x < playField.GetLength(1); x++)
+                {
+                    for (int y = playField.GetLength(0) - 2; y >= 0; y--)
+                    {
+                        if (playField[x, y] != null && playField[x, y].id != -1)
+                        {
+                            while (y < playField.GetLength(0) - 1)
+                            {
+                                if (playField[x, y + 1] == null)
+                                {
+                                    playField[x, y + 1] = playField[x, y];
+                                    playField[x, y] = null;
+                                }
+                                else break;
+                                y++;
+                            }
+                        }
+                    }
+                }
+
+                SpawnItem();
+
+            }
+
+
+            if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))
+            {
+                for (int x = 0; x < playField.GetLength(0); x++)
+                {
+                    int prevX = 0, prevY = 0;
+                    for (int y = 0; y < playField.GetLength(1); y++)
+                    {
+                        if (playField[x, y] != null)
+                        {
+                            if (playField[prevX, prevY] == null || playField[prevX, prevY].id != playField[x, y].id
+                                || playField[prevX, prevY].id == -1 || y == prevY)
+                            {
+                                prevY = y;
+                                prevX = x;
+                            }
+                            else
+                            {
+                                playField[x, y].FadeAndDestroy();
+                                //Destroy(playField[x, y].gameObject); //Потом сделать функцию, чтобы обьект исчезал красиво
+                                playField[x, y] = null;
+                                playField[prevX, prevY].id += 1;
+                                prevX = x;
+                                prevY = y;
+                            }
+                        }
+                    }
+                }
+
+                //Подвинем все обьекты до упора вниз (?)
+                for (int x = 0; x < playField.GetLength(1); x++)
+                {
+                    for (int y = 1; y < playField.GetLength(1); y++)
+                    {
+                        if (playField[x, y] != null && playField[x, y].id != -1)
+                        {
+                            while (y > 0)
+                            {
+                                if (playField[x, y - 1] == null)
+                                {
+                                    playField[x, y - 1] = playField[x, y];
+                                    playField[x, y] = null;
+                                }
+                                else break;
+                                y--;
+                            }
+                        }
+                    }
+                }
+
+                SpawnItem();
+
+            }
         }
     }
 }
