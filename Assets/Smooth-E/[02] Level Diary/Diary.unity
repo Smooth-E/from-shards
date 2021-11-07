@@ -742,7 +742,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 100
-  m_Text: TO MENU
+  m_Text: "\u041D\u0410\u0417\u0410\u0414"
 --- !u!222 &302538045
 CanvasRenderer:
   m_ObjectHideFlags: 0

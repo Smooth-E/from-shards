@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Smooth-E/[05] Lost Screen/Lost Screen.unity
     guid: 296a36b2f0aede341bdfaa0bb8948dfc
+  - enabled: 1
+    path: Assets/Danil/Scenes/Titles.unity
+    guid: 628daf688e16d024f98e829e820aa3d8
   m_configObjects: {}
