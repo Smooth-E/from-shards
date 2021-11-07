@@ -120,6 +120,7 @@ public class PlayableSceneManager : MonoBehaviour
             else
             {
                 canPlay = false;
+                LostScreenController.level = levelIndex;
                 SceneManagerPlayable.LoadScene(5); //Вставить сюда индекс сцены с проигрышем
                 break;
             }

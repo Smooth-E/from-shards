@@ -50,7 +50,7 @@ public class OnItemController : MonoBehaviour
     IEnumerator rescaleOnstart()
     {
         myDescriptionSnippet.SetActive(false);
-        var fadingSpeed = 0.01f;
+        var fadingSpeed = 0.1f;
         for (float scale = 0; scale < 1; scale += fadingSpeed)
         {
             transform.localScale = new Vector3(scale, scale, 1);
@@ -147,7 +147,7 @@ public class OnItemController : MonoBehaviour
     IEnumerator fade()
     {
         myDescriptionSnippet.SetActive(false);
-        var fadingSpeed = 0.01f;
+        var fadingSpeed = 0.1f;
         for (float scale = 1; scale >= -fadingSpeed; scale -= fadingSpeed)
         {
             transform.localScale = new Vector3(scale, scale, 1);

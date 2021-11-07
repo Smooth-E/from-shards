@@ -23,7 +23,8 @@ public class TextScreenController : MonoBehaviour, IPointerDownHandler
     {
         if (mainText.textSpelled)
         {
-            DiaryController.currentLevelIndex = level + 1;
+            if (level + 1 < 4) DiaryController.currentLevelIndex = level + 1;
+            else DiaryController.currentLevelIndex = 3;
             SceneManagerPlayable.LoadScene(2);
         }
     }
