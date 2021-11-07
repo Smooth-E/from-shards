@@ -6,9 +6,9 @@ public class PlayableSceneManager : MonoBehaviour
 {
 
     [SerializeField] private int levelIndexDynamic = -1;
-    public static int levelIndex = 0; //Это число выставляется перед запуском сцены из меню
-    public static int itemsSpawnedOnStart = 3; //Количество вещей на старте уровня
-    public static int maxItemLevelToSpawn = 0; //Максимальный уровень вещи, который можно спавнить (начинается с 0)
+    public static int levelIndex = 0;                             //Это число выставляется перед запуском сцены из меню
+    public static int itemsSpawnedOnStart = 3;                    //Количество вещей на старте уровня
+    public static int maxItemLevelToSpawn = 0;                    //Максимальный уровень вещи, который можно спавнить (начинается с 0)
     static public int blockedCellsOnLevel = 1 * (levelIndex + 1); //Зависимость количества блоков от номера уровня
 
     [Header("System Information:"), Space(10)]
@@ -47,8 +47,8 @@ public class PlayableSceneManager : MonoBehaviour
         }
         for (var x = 0; x < fieldWidth; x++) for (var y = 0; y < fieldHeight; y++) playField[x, y] = null;
 
-        var pos = cellPositions[cellPositions.GetLength(0) / 2, cellPositions.GetLength(1) / 2];
-        Camera.main.transform.position = new Vector3(pos.x, pos.y, -10);
+        //var pos = cellPositions[cellPositions.GetLength(0) / 2, cellPositions.GetLength(1) / 2];
+        //Camera.main.transform.position = new Vector3(pos.x, pos.y, -10);
 
         for (int i = 0; i < itemsSpawnedOnStart; i++)
         {
