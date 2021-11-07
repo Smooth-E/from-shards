@@ -23,9 +23,9 @@ public class TextScreenController : MonoBehaviour, IPointerDownHandler
     {
         if (mainText.textSpelled)
         {
-            if (level + 1 < 4) DiaryController.currentLevelIndex = level + 1;
-            else DiaryController.currentLevelIndex = 3;
-            SceneManagerPlayable.LoadScene(2);
+            if (level + 1 < 4) PlayableSceneManager.levelIndex = level + 1;
+            else PlayableSceneManager.levelIndex = 3;
+            SceneManagerPlayable.LoadScene(1);
         }
     }
 }

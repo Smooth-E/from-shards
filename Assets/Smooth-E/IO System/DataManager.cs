@@ -41,7 +41,7 @@ public class DataManager : MonoBehaviour
 
     public static DataManager instance;
     public static DataContainer data;
-    static string filePath = "\\savefile";
+    static string filePath = "\\savefile32";
 
     public LevelBundle[] levels = new LevelBundle[4];
 
@@ -58,28 +58,38 @@ public class DataManager : MonoBehaviour
     public static void SaveData()
     {
         if (data == null) data = new DataContainer();
+        FileStream fileStram = null;
         try
         {
-            var fileStram = new FileStream(Application.persistentDataPath + filePath, FileMode.OpenOrCreate);
+            fileStram = new FileStream(Application.persistentDataPath + filePath, FileMode.OpenOrCreate);
             new BinaryFormatter().Serialize(fileStram, data);
         }
         catch (System.Exception e)
         {
             Debug.LogError(e);
         }
+        finally
+        {
+            if (fileStram != null) fileStram.Close();
+        }
     }
 
     public static void LoadData()
     {
+        FileStream stream = null;
         try
         {
-            var stream = new FileStream(Application.persistentDataPath + filePath, FileMode.Open);
+            stream = new FileStream(Application.persistentDataPath + filePath, FileMode.Open);
             data = new BinaryFormatter().Deserialize(stream) as DataContainer;
         }
         catch (System.Exception e)
         {
             Debug.LogError(e);
             data = new DataContainer();
+        }
+        finally
+        {
+            if (stream != null) stream.Close();
         }
     }
 }

@@ -20,7 +20,11 @@ public class MenuButtonsController : MonoBehaviour
     {
         var level = DataManager.data.level;
         if (level == 0) SceneManagerPlayable.LoadScene(3);
-        else SceneManagerPlayable.LoadScene(1);
+        else
+        {
+            PlayableSceneManager.levelIndex = level;
+            SceneManagerPlayable.LoadScene(1);
+        }
     }
 
     public void ButtonTitles()

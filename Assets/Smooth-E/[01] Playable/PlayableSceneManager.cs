@@ -133,6 +133,7 @@ public class PlayableSceneManager : MonoBehaviour
         {
             DataManager.LoadData();
             DataManager.data.level += 1;
+            if (DataManager.data.level > 3) DataManager.data.level = 3;
             DataManager.SaveData();
             TextScreenController.level = levelIndex;
             SceneManagerPlayable.LoadScene(4);

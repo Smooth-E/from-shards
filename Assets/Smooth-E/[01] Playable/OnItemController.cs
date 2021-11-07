@@ -84,8 +84,8 @@ public class OnItemController : MonoBehaviour
         else
         {
             var t = myDescriptionSnippet.transform.GetChild(0).GetComponentsInChildren<FancyText>();
-            t[0].textString = "Заблокированная клетка";
-            t[1].textString = "Описание заблокированной клетки";
+            t[0].textString = "Нет пути";
+            t[1].textString = "\"Не могу. Какой - то блок\"";
         }
 
 
