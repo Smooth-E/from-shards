@@ -17,6 +17,7 @@ public class FancyText : MonoBehaviour, IPointerDownHandler
     public float spellingDelay = .01f;
     bool textSizeSet = false;
     bool isActive;
+    bool retype = false;
 
     void Start()
     {
@@ -36,10 +37,18 @@ public class FancyText : MonoBehaviour, IPointerDownHandler
 
     IEnumerator spellingCoroutine()
     {
+        retype = false;
         spellingCoroutineInProgress = true;
         textComponent.text = "";
+        bool finishedByRetype = false;
         foreach(char symbol in textString)
         {
+            if (retype)
+            {
+                finishedByRetype = true;
+                StartCoroutine(spellingCoroutine());
+                break;
+            }
             textComponent.text += symbol;
             if (spellImidiately)
             {
@@ -49,8 +58,11 @@ public class FancyText : MonoBehaviour, IPointerDownHandler
             if (!isActive) break;
             yield return new WaitForSeconds(spellingDelay);
         }
-        textSpelled = true;
-        spellingCoroutineInProgress = false;
+        if (!finishedByRetype)
+        {
+            textSpelled = true;
+            spellingCoroutineInProgress = false;
+        }
     }
 
     void Update()
@@ -70,5 +82,17 @@ public class FancyText : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         spellImidiately = true;
+    }
+
+    IEnumerator changeTextCoruotine(string newText)
+    {
+        yield return null;
+    }
+
+    public void ChangeText(string newText)
+    {
+        //StartCoroutine(changeTextCoruotine(newText));
+        textString = newText;
+        retype = true;
     }
 }

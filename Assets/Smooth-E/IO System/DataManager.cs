@@ -36,8 +36,7 @@ public class DataManager : MonoBehaviour
         public string chapterName = loremIpsumShort;
         public Sprite mainArt;
         public Item[] items = new Item[5];
-        public string lostQuote = loremIpsumLong; //Циатата, высвечивающаяся при проигрыше
-        public string dairyQuote = loremIpsumLong; //Циатата в нижнем углу дневника
+        public string chapterStory = loremIpsumLong;
     }
 
     public static DataManager instance;
